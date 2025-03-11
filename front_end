@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Count Stacked Bar Chart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #chart {
+            width: 80%;
+            height: 500px;
+            margin: auto;
+        }
+
+        .bar {
+            cursor: pointer;
+        }
+
+        #update-time {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .axis text {
+            font-size: 12px;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            shape-rendering: crispEdges;
+        }
+
+        #debug-info {
+            margin-top: 30px;
+        }
+
+        #debug-info pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Word Count Stacked Bar Chart</h1>
+    <div id="chart"></div>
+    <div id="update-time">Last updated: </div>
+
+    <div id="debug-info">
+        <h2>Debugging Information:</h2>
+        <p><strong>Loaded Data:</strong></p>
+        <pre id="raw-data">Loading raw data...</pre>
+        <p><strong>Aggregated Data:</strong></p>
+        <pre id="aggregated-data">Aggregating data...</pre>
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script>
+        // Function to load CSV data
+        async function loadCSVData() {
+            try {
+                const response = await fetch('word_counts.csv');
+                const text = await response.text();
+                const data = d3.csvParse(text);
+
+                // Display raw data on the page
+                document.getElementById("raw-data").textContent = JSON.stringify(data, null, 2);
+
+                return data;
+            } catch (error) {
+                document.getElementById("raw-data").textContent = "Error loading CSV data: " + error.message;
+            }
+        }
+
+        // Aggregate the data by Agency and Chapter
+        function aggregateData(data) {
+            try {
+                const agencyData = d3.nest()
+                    .key(d => d.Agency)
+                    .key(d => d.Chapter)
+                    .rollup(leaves => d3.sum(leaves, d => +d["Word Count"]))
+                    .entries(data);
+
+                // Display aggregated data on the page
+                document.getElementById("aggregated-data").textContent = JSON.stringify(agencyData, null, 2);
+
+                return agencyData;
+            } catch (error) {
+                document.getElementById("aggregated-data").textContent = "Error aggregating data: " + error.message;
+            }
+        }
+
+        // Create the chart based on the fetched data
+        function createChart(aggregatedData) {
+            const margin = {top: 20, right: 30, bottom: 40, left: 40};
+            const width = 900 - margin.left - margin.right;
+            const height = 500 - margin.top - margin.bottom;
+
+            // Remove previous chart if exists
+            d3.select('#chart').select('svg').remove();
+
+            const svg = d3.select("#chart").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            const x0 = d3.scaleBand().rangeRound([0, width]).padding(0.1);
+            const x1 = d3.scaleBand();
+            const y = d3.scaleLinear().rangeRound([height, 0]);
+
+            const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+            // Get list of agencies and chapters
+            const agencies = aggregatedData.map(d => d.key);
+            const chapters = [...new Set(aggregatedData.flatMap(d => d.values.map(v => v.key)))];
+
+            x0.domain(agencies);
+            x1.domain(chapters).rangeRound([0, x0.bandwidth()]);
+            y.domain([0, d3.max(aggregatedData, agency => d3.sum(agency.values, chapter => chapter.value))]).nice();
+
+            // Create the bars for each chapter within each agency
+            svg.append("g")
+                .selectAll("g")
+                .data(aggregatedData)
+                .enter().append("g")
+                .attr("transform", d => "translate(" + x0(d.key) + ",0)")
+                .selectAll("rect")
+                .data(d => d.values)
+                .enter().append("rect")
+                .attr("x", d => x1(d.key))
+                .attr("y", d => y(d.value))
+                .attr("width", x1.bandwidth())
+                .attr("height", d => height - y(d.value))
+                .attr("fill", d => color(d.key));
+
+            // Add labels with the total word count for each agency
+            svg.append("g")
+                .selectAll(".bar")
+                .data(aggregatedData)
+                .enter().append("text")
+                .attr("x", d => x0(d.key) + x1.bandwidth() / 2)
+                .attr("y", d => y(d3.sum(d.values, v => v.value)) + 5)
+                .attr("text-anchor", "middle")
+                .text(d => d3.sum(d.values, v => v.value));
+
+            // Add x-axis
+            svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x0))
+                .selectAll("text")
+                .style("text-anchor", "middle");
+
+            // Add y-axis
+            svg.append("g")
+                .attr("class", "y axis")
+                .call(d3.axisLeft(y));
+
+            // Add axis labels
+            svg.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2)
+                .attr("y", -margin.left + 20)
+                .attr("dy", ".71em")
+                .style("text-anchor", "middle")
+                .text("Word Count");
+
+            svg.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + margin.bottom - 10)
+                .style("text-anchor", "middle")
+                .text("Agency");
+        }
+
+        // Initialize the chart with data from the CSV
+        loadCSVData().then(data => {
+            if (data) {
+                const aggregatedData = aggregateData(data);
+                createChart(aggregatedData);
+            }
+        });
+
+    </script>
+</body>
+</html>

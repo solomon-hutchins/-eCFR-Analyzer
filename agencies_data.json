@@ -1,0 +1,3845 @@
+[
+    {
+        "name": "Administrative Conference of the United States",
+        "slug": "administrative-conference-of-the-united-states",
+        "cfr_references": [
+            {
+                "title": 1,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Advisory Council on Historic Preservation",
+        "slug": "advisory-council-on-historic-preservation",
+        "cfr_references": [
+            {
+                "title": 36,
+                "chapter": "VIII"
+            }
+        ]
+    },
+    {
+        "name": "Special Inspector General for Afghanistan Reconstruction",
+        "slug": "special-inspector-general-for-afghanistan-reconstruction",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LXXXIII"
+            }
+        ]
+    },
+    {
+        "name": "African Development Foundation",
+        "slug": "african-development-foundation",
+        "cfr_references": [
+            {
+                "title": 22,
+                "chapter": "XV"
+            },
+            {
+                "title": 48,
+                "chapter": "57"
+            }
+        ]
+    },
+    {
+        "name": "United States Agency for Global Media",
+        "slug": "united-states-agency-for-global-media",
+        "cfr_references": [
+            {
+                "title": 22,
+                "chapter": "V"
+            },
+            {
+                "title": 48,
+                "chapter": "19"
+            }
+        ]
+    },
+    {
+        "name": "Department of Agriculture",
+        "slug": "agriculture-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "IV"
+            },
+            {
+                "title": 5,
+                "chapter": "LXXIII"
+            },
+            {
+                "title": 7,
+                "chapter": "XVI"
+            },
+            {
+                "title": 7,
+                "chapter": "XX"
+            },
+            {
+                "title": 48,
+                "chapter": "4"
+            }
+        ]
+    },
+    {
+        "name": "Agricultural Marketing Service",
+        "slug": "agricultural-marketing-service",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "I"
+            },
+            {
+                "title": 7,
+                "chapter": "VIII"
+            },
+            {
+                "title": 7,
+                "chapter": "IX"
+            },
+            {
+                "title": 7,
+                "chapter": "X"
+            },
+            {
+                "title": 7,
+                "chapter": "XI"
+            },
+            {
+                "title": 9,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Agricultural Research Service",
+        "slug": "agricultural-research-service",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Animal and Plant Health Inspection Service",
+        "slug": "animal-and-plant-health-inspection-service",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "III"
+            },
+            {
+                "title": 9,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Commodity Credit Corporation",
+        "slug": "commodity-credit-corporation",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XIV"
+            }
+        ]
+    },
+    {
+        "name": "Economic Research Service",
+        "slug": "economic-research-service",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XXXVII"
+            }
+        ]
+    },
+    {
+        "name": "Farm Service Agency",
+        "slug": "farm-service-agency",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "VII"
+            }
+        ]
+    },
+    {
+        "name": "Federal Crop Insurance Corporation",
+        "slug": "federal-crop-insurance-corporation",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Food and Nutrition Service",
+        "slug": "food-and-nutrition-service",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Food Safety and Inspection Service",
+        "slug": "food-safety-and-inspection-service",
+        "cfr_references": [
+            {
+                "title": 9,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Foreign Agricultural Service",
+        "slug": "foreign-agricultural-service",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XV"
+            }
+        ]
+    },
+    {
+        "name": "Forest Service",
+        "slug": "forest-service",
+        "cfr_references": [
+            {
+                "title": 36,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "National Agricultural Statistics Service",
+        "slug": "national-agricultural-statistics-service",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XXXVI"
+            }
+        ]
+    },
+    {
+        "name": "National Institute of Food and Agriculture",
+        "slug": "national-institute-of-food-and-agriculture",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XXXIV"
+            }
+        ]
+    },
+    {
+        "name": "Natural Resources Conservation Service",
+        "slug": "natural-resources-conservation-service",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "VI"
+            }
+        ]
+    },
+    {
+        "name": "Office of Advocacy and Outreach",
+        "slug": "advocacy-and-outreach-office",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XXV"
+            }
+        ]
+    },
+    {
+        "name": "Office of Chief Financial Officer",
+        "slug": "office-of-the-chief-financial-officer-agriculture-department",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XXX"
+            }
+        ]
+    },
+    {
+        "name": "Office of Energy Policy and New Uses",
+        "slug": "energy-policy-and-new-uses-office",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XXIX"
+            }
+        ]
+    },
+    {
+        "name": "Office of Environmental Quality",
+        "slug": "office-of-environmental-quality",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XXXI"
+            }
+        ]
+    },
+    {
+        "name": "Office of Information Resources Management",
+        "slug": "office-of-information-resources-management",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XXVII"
+            }
+        ]
+    },
+    {
+        "name": "Office of Inspector General",
+        "slug": "inspector-general-office-agriculture-department",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XXVI"
+            }
+        ]
+    },
+    {
+        "name": "Office of Operations",
+        "slug": "office-of-operations",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XXVIII"
+            }
+        ]
+    },
+    {
+        "name": "Office of Procurement and Property Management",
+        "slug": "procurement-and-property-management-office-of",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XXXII"
+            }
+        ]
+    },
+    {
+        "name": "Office of Secretary of Agriculture",
+        "slug": "office-of-secretary-of-agriculture",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "N/A"
+            }
+        ]
+    },
+    {
+        "name": "Office of Transportation",
+        "slug": "transportation-office",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XXXIII"
+            }
+        ]
+    },
+    {
+        "name": "Rural Business-Cooperative Service",
+        "slug": "rural-business-cooperative-service",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XVIII"
+            },
+            {
+                "title": 7,
+                "chapter": "XLII"
+            },
+            {
+                "title": 7,
+                "chapter": "L"
+            }
+        ]
+    },
+    {
+        "name": "Rural Housing Service",
+        "slug": "rural-housing-service",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XVIII"
+            },
+            {
+                "title": 7,
+                "chapter": "XXXV"
+            },
+            {
+                "title": 7,
+                "chapter": "L"
+            }
+        ]
+    },
+    {
+        "name": "Rural Utilities Service",
+        "slug": "rural-utilities-service",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XVII"
+            },
+            {
+                "title": 7,
+                "chapter": "XVIII"
+            },
+            {
+                "title": 7,
+                "chapter": "XLII"
+            },
+            {
+                "title": 7,
+                "chapter": "L"
+            }
+        ]
+    },
+    {
+        "name": "World Agricultural Outlook Board",
+        "slug": "world-agricultural-outlook-board",
+        "cfr_references": [
+            {
+                "title": 7,
+                "chapter": "XXXVIII"
+            }
+        ]
+    },
+    {
+        "name": "Air Transportation System Stabilization",
+        "slug": "air-transportation-stabilization-board",
+        "cfr_references": [
+            {
+                "title": 14,
+                "chapter": "VI"
+            }
+        ]
+    },
+    {
+        "name": "American Battle Monuments Commission",
+        "slug": "american-battle-monuments-commission",
+        "cfr_references": [
+            {
+                "title": 36,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Appalachian Regional Commission",
+        "slug": "appalachian-regional-commission",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "IX"
+            }
+        ]
+    },
+    {
+        "name": "Architectural and Transportation Barriers Compliance Board",
+        "slug": "architectural-and-transportation-barriers-compliance-board",
+        "cfr_references": [
+            {
+                "title": 36,
+                "chapter": "XI"
+            }
+        ]
+    },
+    {
+        "name": "Arctic Research Commission",
+        "slug": "arctic-research-commission",
+        "cfr_references": [
+            {
+                "title": 45,
+                "chapter": "XXIII"
+            }
+        ]
+    },
+    {
+        "name": "Armed Forces Retirement Home",
+        "slug": "armed-forces-retirement-home",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XI"
+            },
+            {
+                "title": 38,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Committee for Purchase From People Who Are Blind or Severely Disabled",
+        "slug": "committee-for-purchase-from-people-who-are-blind-or-severely-disabled",
+        "cfr_references": [
+            {
+                "title": 41,
+                "chapter": "51"
+            }
+        ]
+    },
+    {
+        "name": "Central Intelligence Agency",
+        "slug": "central-intelligence-agency",
+        "cfr_references": [
+            {
+                "title": 32,
+                "chapter": "XIX"
+            }
+        ]
+    },
+    {
+        "name": "Chemical Safety and Hazard Investigation Board",
+        "slug": "chemical-safety-and-hazard-investigation-board",
+        "cfr_references": [
+            {
+                "title": 40,
+                "chapter": "VI"
+            }
+        ]
+    },
+    {
+        "name": "Commission on Civil Rights",
+        "slug": "civil-rights-commission",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LXVIII"
+            },
+            {
+                "title": 45,
+                "chapter": "VII"
+            }
+        ]
+    },
+    {
+        "name": "Department of Commerce",
+        "slug": "commerce-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XIII"
+            },
+            {
+                "title": 44,
+                "chapter": "IV"
+            },
+            {
+                "title": 48,
+                "chapter": "13"
+            }
+        ]
+    },
+    {
+        "name": "Bureau of Census",
+        "slug": "census-bureau",
+        "cfr_references": [
+            {
+                "title": 15,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Bureau of Economic Analysis",
+        "slug": "economic-analysis-bureau",
+        "cfr_references": [
+            {
+                "title": 15,
+                "chapter": "VIII"
+            }
+        ]
+    },
+    {
+        "name": "Bureau of Industry and Security",
+        "slug": "industry-and-security-bureau",
+        "cfr_references": [
+            {
+                "title": 15,
+                "chapter": "VII"
+            }
+        ]
+    },
+    {
+        "name": "Economic Development Administration",
+        "slug": "economic-development-administration",
+        "cfr_references": [
+            {
+                "title": 13,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Foreign-Trade Zones Board",
+        "slug": "foreign-trade-zones-board",
+        "cfr_references": [
+            {
+                "title": 15,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "International Trade Administration",
+        "slug": "international-trade-administration",
+        "cfr_references": [
+            {
+                "title": 15,
+                "chapter": "III"
+            },
+            {
+                "title": 19,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Minority Business Development Agency",
+        "slug": "minority-business-development-agency",
+        "cfr_references": [
+            {
+                "title": 15,
+                "chapter": "XIV"
+            }
+        ]
+    },
+    {
+        "name": "National Institute of Standards and Technology",
+        "slug": "national-institute-of-standards-and-technology",
+        "cfr_references": [
+            {
+                "title": 15,
+                "chapter": "II"
+            },
+            {
+                "title": 37,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "National Oceanic and Atmospheric Administration",
+        "slug": "national-oceanic-and-atmospheric-administration",
+        "cfr_references": [
+            {
+                "title": 15,
+                "chapter": "IX"
+            },
+            {
+                "title": 50,
+                "chapter": "III"
+            },
+            {
+                "title": 50,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "National Oceanic and Atmospheric Administration National Marine Fisheries Service",
+        "slug": "national-oceanic-and-atmospheric-administration-national-marine-fisheries-service",
+        "cfr_references": [
+            {
+                "title": 50,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "National Technical Information Service",
+        "slug": "national-technical-information-service",
+        "cfr_references": [
+            {
+                "title": 15,
+                "chapter": "XI"
+            }
+        ]
+    },
+    {
+        "name": "National Telecommunications and Information Administration",
+        "slug": "national-telecommunications-and-information-administration",
+        "cfr_references": [
+            {
+                "title": 15,
+                "chapter": "XXIII"
+            },
+            {
+                "title": 47,
+                "chapter": "III"
+            },
+            {
+                "title": 47,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Office of Secretary of Commerce",
+        "slug": "office-of-secretary-of-commerce",
+        "cfr_references": [
+            {
+                "title": 15,
+                "chapter": "N/A"
+            }
+        ]
+    },
+    {
+        "name": "Office of Under-Secretary for Economic Affairs",
+        "slug": "under-secretary-for-economic-affairs",
+        "cfr_references": [
+            {
+                "title": 15,
+                "chapter": "XV"
+            }
+        ]
+    },
+    {
+        "name": "United States Patent and Trademark Office",
+        "slug": "patent-and-trademark-office",
+        "cfr_references": [
+            {
+                "title": 37,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Commodity Futures Trading Commission",
+        "slug": "commodity-futures-trading-commission",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XLI"
+            },
+            {
+                "title": 17,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Construction Industry Collective Bargaining Commission",
+        "slug": "construction-industry-collective-bargaining-commission",
+        "cfr_references": [
+            {
+                "title": 29,
+                "chapter": "IX"
+            }
+        ]
+    },
+    {
+        "name": "Consumer Financial Protection Bureau",
+        "slug": "consumer-financial-protection-bureau",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LXXXIV"
+            },
+            {
+                "title": 12,
+                "chapter": "X"
+            }
+        ]
+    },
+    {
+        "name": "Consumer Product Safety Commission",
+        "slug": "consumer-product-safety-commission",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LXXI"
+            },
+            {
+                "title": 16,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Council of the Inspectors General on Integrity and Efficiency",
+        "slug": "council-of-the-inspectors-general-on-integrity-and-efficiency",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XCVIII"
+            }
+        ]
+    },
+    {
+        "name": "Court Services and Offender Supervision Agency for the District of Columbia",
+        "slug": "court-services-and-offender-supervision-agency-for-the-district-of-columbia",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LXX"
+            },
+            {
+                "title": 28,
+                "chapter": "VIII"
+            }
+        ]
+    },
+    {
+        "name": "Defense Nuclear Facilities Safety Board",
+        "slug": "defense-nuclear-facilities-safety-board",
+        "cfr_references": [
+            {
+                "title": 10,
+                "chapter": "XVII"
+            }
+        ]
+    },
+    {
+        "name": "Department of Defense",
+        "slug": "defense-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XI"
+            },
+            {
+                "title": 5,
+                "chapter": "XXVI"
+            },
+            {
+                "title": 32,
+                "chapter": "N/A"
+            },
+            {
+                "title": 40,
+                "chapter": "VII"
+            }
+        ]
+    },
+    {
+        "name": "Army Corps of Engineers",
+        "slug": "engineers-corps",
+        "cfr_references": [
+            {
+                "title": 33,
+                "chapter": "II"
+            },
+            {
+                "title": 36,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Defense Acquisition Regulations System",
+        "slug": "defense-acquisition-regulations-system",
+        "cfr_references": [
+            {
+                "title": 48,
+                "chapter": "2"
+            }
+        ]
+    },
+    {
+        "name": "Defense Logistics Agency",
+        "slug": "defense-logistics-agency",
+        "cfr_references": [
+            {
+                "title": 32,
+                "chapter": "XII"
+            },
+            {
+                "title": 48,
+                "chapter": "54"
+            }
+        ]
+    },
+    {
+        "name": "Department of Navy Acquisition Regulations",
+        "slug": "department-of-navy-acquisition-regulations",
+        "cfr_references": [
+            {
+                "title": 48,
+                "chapter": "52"
+            }
+        ]
+    },
+    {
+        "name": "National Geospatial-Intelligence Agency",
+        "slug": "national-geospatial-intelligence-agency",
+        "cfr_references": []
+    },
+    {
+        "name": "Office of the Secretary",
+        "slug": "office-of-the-secretary",
+        "cfr_references": [
+            {
+                "title": 32,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Delaware River Basin Commission",
+        "slug": "delaware-river-basin-commission",
+        "cfr_references": [
+            {
+                "title": 18,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Denali Commission",
+        "slug": "denali-commission",
+        "cfr_references": [
+            {
+                "title": 45,
+                "chapter": "IX"
+            }
+        ]
+    },
+    {
+        "name": "Office of Director of National Intelligence",
+        "slug": "national-intelligence-office-of-the-national-director",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "IV"
+            },
+            {
+                "title": 32,
+                "chapter": "XVII"
+            }
+        ]
+    },
+    {
+        "name": "National Council on Disability",
+        "slug": "national-council-on-disability",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "C"
+            },
+            {
+                "title": 34,
+                "chapter": "XII"
+            }
+        ]
+    },
+    {
+        "name": "East-West Foreign Trade Board",
+        "slug": "east-west-foreign-trade-board",
+        "cfr_references": [
+            {
+                "title": 15,
+                "chapter": "XIII"
+            }
+        ]
+    },
+    {
+        "name": "Department of Education",
+        "slug": "education-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXXIV"
+            },
+            {
+                "title": 5,
+                "chapter": "LIII"
+            }
+        ]
+    },
+    {
+        "name": "Department of Education Acquisition Regulation",
+        "slug": "department-of-education-acquisition-regulation",
+        "cfr_references": [
+            {
+                "title": 48,
+                "chapter": "34"
+            }
+        ]
+    },
+    {
+        "name": "Office for Civil Rights",
+        "slug": "office-for-civil-rights",
+        "cfr_references": [
+            {
+                "title": 34,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Office of and Adult Education Technical Career",
+        "slug": "office-of-and-adult-education-technical-career",
+        "cfr_references": [
+            {
+                "title": 34,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Office of Bilingual Education and Minority Languages Affairs",
+        "slug": "office-of-bilingual-education-and-minority-languages-affairs",
+        "cfr_references": [
+            {
+                "title": 34,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Office of Elementary and Secondary Education",
+        "slug": "office-of-elementary-and-secondary-education",
+        "cfr_references": [
+            {
+                "title": 34,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Office of Postsecondary Education",
+        "slug": "office-of-postsecondary-education",
+        "cfr_references": [
+            {
+                "title": 34,
+                "chapter": "VI"
+            }
+        ]
+    },
+    {
+        "name": "Office of Secretary of Education",
+        "slug": "office-of-secretary-of-education",
+        "cfr_references": [
+            {
+                "title": 34,
+                "chapter": "N/A"
+            }
+        ]
+    },
+    {
+        "name": "Office of Special Education and Rehabilitative Services",
+        "slug": "office-of-special-education-and-rehabilitative-services",
+        "cfr_references": [
+            {
+                "title": 34,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Election Assistance Commission",
+        "slug": "election-assistance-commission",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "LVIII"
+            },
+            {
+                "title": 11,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Emergency Oil and Gas Guaranteed Loan Board",
+        "slug": "emergency-oil-and-gas-guaranteed-loan-board",
+        "cfr_references": [
+            {
+                "title": 13,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Emergency Steel Guarantee Loan Board",
+        "slug": "emergency-steel-guarantee-loan-board",
+        "cfr_references": [
+            {
+                "title": 13,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "National Commission for Employment Policy",
+        "slug": "national-commission-for-employment-policy",
+        "cfr_references": [
+            {
+                "title": 1,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Department of Energy",
+        "slug": "energy-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "IX"
+            },
+            {
+                "title": 5,
+                "chapter": "XXIII"
+            },
+            {
+                "title": 10,
+                "chapter": "II"
+            },
+            {
+                "title": 10,
+                "chapter": "III"
+            },
+            {
+                "title": 10,
+                "chapter": "X"
+            },
+            {
+                "title": 41,
+                "chapter": "109"
+            },
+            {
+                "title": 48,
+                "chapter": "9"
+            }
+        ]
+    },
+    {
+        "name": "Federal Energy Regulatory Commission",
+        "slug": "federal-energy-regulatory-commission",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XXIV"
+            },
+            {
+                "title": 18,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Joint Board for the Enrollment of Actuaries",
+        "slug": "joint-board-for-enrollment-of-actuaries",
+        "cfr_references": [
+            {
+                "title": 20,
+                "chapter": "VIII"
+            }
+        ]
+    },
+    {
+        "name": "Environmental Protection Agency",
+        "slug": "environmental-protection-agency",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XV"
+            },
+            {
+                "title": 5,
+                "chapter": "LIV"
+            },
+            {
+                "title": 40,
+                "chapter": "I"
+            },
+            {
+                "title": 40,
+                "chapter": "IV"
+            },
+            {
+                "title": 40,
+                "chapter": "VII"
+            },
+            {
+                "title": 41,
+                "chapter": "115"
+            },
+            {
+                "title": 48,
+                "chapter": "15"
+            }
+        ]
+    },
+    {
+        "name": "Equal Employment Opportunity Commission",
+        "slug": "equal-employment-opportunity-commission",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LXII"
+            },
+            {
+                "title": 29,
+                "chapter": "XIV"
+            }
+        ]
+    },
+    {
+        "name": "Executive Office of the President",
+        "slug": "executive-office-of-the-president",
+        "cfr_references": [
+            {
+                "title": 3,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Council on Environmental Quality",
+        "slug": "council-on-environmental-quality",
+        "cfr_references": [
+            {
+                "title": 40,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "National Security Council",
+        "slug": "national-security-council",
+        "cfr_references": [
+            {
+                "title": 32,
+                "chapter": "XXI"
+            },
+            {
+                "title": 47,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Office of Science and Technology Policy",
+        "slug": "science-and-technology-policy-office",
+        "cfr_references": [
+            {
+                "title": 32,
+                "chapter": "XXIV"
+            },
+            {
+                "title": 47,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Office of the Intellectual Property Enforcement Coordinator",
+        "slug": "office-of-the-intellectual-property-enforcement-coordinator",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "CIV"
+            }
+        ]
+    },
+    {
+        "name": "Export-Import Bank of the United States",
+        "slug": "export-import-bank",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXXV"
+            },
+            {
+                "title": 5,
+                "chapter": "LII"
+            },
+            {
+                "title": 12,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Farm Credit Administration",
+        "slug": "farm-credit-administration",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XXXI"
+            },
+            {
+                "title": 12,
+                "chapter": "VI"
+            }
+        ]
+    },
+    {
+        "name": "Farm Credit System Insurance Corporation",
+        "slug": "farm-credit-system-insurance-corporation",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XXX"
+            },
+            {
+                "title": 12,
+                "chapter": "XIV"
+            }
+        ]
+    },
+    {
+        "name": "Federal Acquisition Regulatory Council",
+        "slug": "federal-acquisition-regulation",
+        "cfr_references": [
+            {
+                "title": 48,
+                "chapter": "1"
+            }
+        ]
+    },
+    {
+        "name": "Federal Acquisition Security Council",
+        "slug": "federal-acqusition-supply-chain-security",
+        "cfr_references": [
+            {
+                "title": 41,
+                "chapter": "201"
+            }
+        ]
+    },
+    {
+        "name": "Federal Communications Commission",
+        "slug": "federal-communications-commission",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "LX"
+            },
+            {
+                "title": 5,
+                "chapter": "XXIX"
+            },
+            {
+                "title": 47,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Federal Deposit Insurance Corporation",
+        "slug": "federal-deposit-insurance-corporation",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XXII"
+            },
+            {
+                "title": 12,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Federal Election Commission",
+        "slug": "federal-election-commission",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XXXVII"
+            },
+            {
+                "title": 11,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Federal Financial Institutions Examination Council",
+        "slug": "federal-financial-institutions-examination-council",
+        "cfr_references": [
+            {
+                "title": 12,
+                "chapter": "XI"
+            }
+        ]
+    },
+    {
+        "name": "Federal Financing Bank",
+        "slug": "federal-financing-bank",
+        "cfr_references": [
+            {
+                "title": 12,
+                "chapter": "VIII"
+            }
+        ]
+    },
+    {
+        "name": "Federal Housing Finance Agency",
+        "slug": "federal-housing-finance-agency",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LXXX"
+            },
+            {
+                "title": 12,
+                "chapter": "XII"
+            }
+        ]
+    },
+    {
+        "name": "Federal Labor Relations Authority",
+        "slug": "federal-labor-relations-authority",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XLIX"
+            },
+            {
+                "title": 22,
+                "chapter": "XIV"
+            }
+        ]
+    },
+    {
+        "name": "Federal Service Impasses Panel ",
+        "slug": "federal-service-impasses-panel",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XIV"
+            }
+        ]
+    },
+    {
+        "name": "General Counsel of the Federal Labor Relations Authority",
+        "slug": "general-counsel-of-the-federal-labor-relations-authority",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XIV"
+            },
+            {
+                "title": 22,
+                "chapter": "XIV"
+            }
+        ]
+    },
+    {
+        "name": "Federal Maritime Commission",
+        "slug": "federal-maritime-commission",
+        "cfr_references": [
+            {
+                "title": 46,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Federal Mediation and Conciliation Service",
+        "slug": "federal-mediation-and-conciliation-service",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "CIII"
+            },
+            {
+                "title": 29,
+                "chapter": "XII"
+            }
+        ]
+    },
+    {
+        "name": "Federal Mine Safety and Health Review Commission",
+        "slug": "federal-mine-safety-and-health-review-commission",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LXXIV"
+            },
+            {
+                "title": 29,
+                "chapter": "XXVII"
+            }
+        ]
+    },
+    {
+        "name": "Federal Permitting Improvement Steering Council",
+        "slug": "federal-permitting-improvement-steering-council",
+        "cfr_references": [
+            {
+                "title": 40,
+                "chapter": "IX"
+            }
+        ]
+    },
+    {
+        "name": "Federal Procurement Regulations System",
+        "slug": "federal-procurement-regulations-system",
+        "cfr_references": [
+            {
+                "title": 41,
+                "chapter": "N/A"
+            }
+        ]
+    },
+    {
+        "name": "Federal Property Management Regulations System",
+        "slug": "federal-property-management-regulations-system",
+        "cfr_references": [
+            {
+                "title": 41,
+                "chapter": "N/A"
+            }
+        ]
+    },
+    {
+        "name": "Administrative Committee of the Federal Register",
+        "slug": "federal-register-administrative-committee",
+        "cfr_references": [
+            {
+                "title": 1,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Federal Reserve System",
+        "slug": "federal-reserve-system",
+        "cfr_references": [
+            {
+                "title": 12,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Board of Governors of the Federal Reserve System",
+        "slug": "board-of-governors-of-the-federal-reserve-system",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LVIII"
+            }
+        ]
+    },
+    {
+        "name": "Federal Retirement Thrift Investment Board",
+        "slug": "federal-retirement-thrift-investment-board",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "VI"
+            },
+            {
+                "title": 5,
+                "chapter": "LXXVI"
+            }
+        ]
+    },
+    {
+        "name": "Federal Trade Commission",
+        "slug": "federal-trade-commission",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XLVII"
+            },
+            {
+                "title": 16,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Federal Travel Regulation System",
+        "slug": "federal-travel-regulation-system",
+        "cfr_references": [
+            {
+                "title": 41,
+                "chapter": "N/A"
+            }
+        ]
+    },
+    {
+        "name": "Financial Stability Oversight Council",
+        "slug": "financial-stability-oversight-council",
+        "cfr_references": [
+            {
+                "title": 12,
+                "chapter": "XIII"
+            }
+        ]
+    },
+    {
+        "name": "Commission of Fine Arts",
+        "slug": "commission-of-fine-arts",
+        "cfr_references": [
+            {
+                "title": 45,
+                "chapter": "XXI"
+            }
+        ]
+    },
+    {
+        "name": "First Responder Network Authority",
+        "slug": "first-responder-network-authority",
+        "cfr_references": [
+            {
+                "title": 47,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Foreign Service Grievance Board",
+        "slug": "foreign-service-grievance-board",
+        "cfr_references": [
+            {
+                "title": 22,
+                "chapter": "IX"
+            }
+        ]
+    },
+    {
+        "name": "Foreign Service Impasse Disputes Panel",
+        "slug": "foreign-service-impasse-disputes-panel",
+        "cfr_references": [
+            {
+                "title": 22,
+                "chapter": "XIV"
+            },
+            {
+                "title": 22,
+                "chapter": "XIV"
+            }
+        ]
+    },
+    {
+        "name": "Foreign Service Labor Relations Board",
+        "slug": "foreign-service-labor-relations-board",
+        "cfr_references": [
+            {
+                "title": 22,
+                "chapter": "XIV"
+            },
+            {
+                "title": 22,
+                "chapter": "XIV"
+            }
+        ]
+    },
+    {
+        "name": "General Services Administration",
+        "slug": "general-services-administration",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LVII"
+            },
+            {
+                "title": 41,
+                "chapter": "105"
+            },
+            {
+                "title": 48,
+                "chapter": "5"
+            }
+        ]
+    },
+    {
+        "name": "Civilian Board of Contract Appeals",
+        "slug": "civilian-board-of-contract-appeals",
+        "cfr_references": [
+            {
+                "title": 48,
+                "chapter": "61"
+            }
+        ]
+    },
+    {
+        "name": "Government Accountability Office",
+        "slug": "government-accountability-office",
+        "cfr_references": [
+            {
+                "title": 4,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Office of Government Ethics",
+        "slug": "government-ethics-office",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XVI"
+            }
+        ]
+    },
+    {
+        "name": "Gulf Coast Ecosystem Restoration Council",
+        "slug": "gulf-coast-ecosystem-restoration-council",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "LIX"
+            },
+            {
+                "title": 40,
+                "chapter": "VIII"
+            }
+        ]
+    },
+    {
+        "name": "Harry S. Truman Scholarship Foundation",
+        "slug": "harry-s-truman-scholarship-foundation",
+        "cfr_references": [
+            {
+                "title": 45,
+                "chapter": "XVIII"
+            }
+        ]
+    },
+    {
+        "name": "Department of Health and Human Services",
+        "slug": "health-and-human-services-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "III"
+            },
+            {
+                "title": 5,
+                "chapter": "XLV"
+            },
+            {
+                "title": 45,
+                "chapter": "N/A"
+            },
+            {
+                "title": 48,
+                "chapter": "3"
+            }
+        ]
+    },
+    {
+        "name": "Administration for Children and Families",
+        "slug": "children-and-families-administration",
+        "cfr_references": [
+            {
+                "title": 45,
+                "chapter": "XIII"
+            }
+        ]
+    },
+    {
+        "name": "Centers for Medicare & Medicaid Services",
+        "slug": "centers-for-medicare-medicaid-services",
+        "cfr_references": [
+            {
+                "title": 42,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Food and Drug Administration",
+        "slug": "food-and-drug-administration",
+        "cfr_references": [
+            {
+                "title": 21,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Indian Health Service",
+        "slug": "indian-health-service",
+        "cfr_references": [
+            {
+                "title": 25,
+                "chapter": "V"
+            },
+            {
+                "title": 42,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Office of Administration for Children and Families Child Support Enforcement (Child Support Enforcement Program)",
+        "slug": "office-of-administration-for-children-and-families-child-support-enforcement-(child-support-enforcement-program)",
+        "cfr_references": [
+            {
+                "title": 45,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Office of Administration for Children and Families Community Services",
+        "slug": "office-of-administration-for-children-and-families-community-services",
+        "cfr_references": [
+            {
+                "title": 45,
+                "chapter": "X"
+            }
+        ]
+    },
+    {
+        "name": "Office of Administration for Children and Families Family Assistance (Assistance Programs)",
+        "slug": "office-of-administration-for-children-and-families-family-assistance-(assistance-programs)",
+        "cfr_references": [
+            {
+                "title": 45,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Office of Administration for Children and Families Refugee Resettlement",
+        "slug": "refugee-resettlement-office",
+        "cfr_references": [
+            {
+                "title": 45,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Office of Inspector General-Health Care",
+        "slug": "office-of-inspector-general-health-care",
+        "cfr_references": [
+            {
+                "title": 42,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Public Health Service",
+        "slug": "public-health-service",
+        "cfr_references": [
+            {
+                "title": 42,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Department of Homeland Security",
+        "slug": "homeland-security-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXX"
+            },
+            {
+                "title": 5,
+                "chapter": "XXXVI"
+            },
+            {
+                "title": 8,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Coast Guard",
+        "slug": "coast-guard",
+        "cfr_references": [
+            {
+                "title": 33,
+                "chapter": "I"
+            },
+            {
+                "title": 46,
+                "chapter": "I"
+            },
+            {
+                "title": 49,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Coast Guard (Great Lakes Pilotage)",
+        "slug": "coast-guard-(great-lakes-pilotage)",
+        "cfr_references": [
+            {
+                "title": 46,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Department of Homeland Security Acquisition Regulation",
+        "slug": "department-of-homeland-security-acquisition-regulation",
+        "cfr_references": [
+            {
+                "title": 48,
+                "chapter": "30"
+            }
+        ]
+    },
+    {
+        "name": "Federal Emergency Management Agency",
+        "slug": "federal-emergency-management-agency",
+        "cfr_references": [
+            {
+                "title": 44,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Federal Law Enforcement Training Center",
+        "slug": "federal-law-enforcement-training-center",
+        "cfr_references": [
+            {
+                "title": 31,
+                "chapter": "VII"
+            }
+        ]
+    },
+    {
+        "name": "Human Resources Management System (Homeland Security - Office of Personnel Management)",
+        "slug": "human-resources-management-system-(homeland-security---office-of-personnel-management)",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XCVII"
+            }
+        ]
+    },
+    {
+        "name": "Office of the Secretary of Homeland Security",
+        "slug": "office-of-the-secretary-of-homeland-security",
+        "cfr_references": [
+            {
+                "title": 6,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Secret Service",
+        "slug": "secret-service",
+        "cfr_references": [
+            {
+                "title": 31,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Transportation Security Administration",
+        "slug": "transportation-security-administration",
+        "cfr_references": [
+            {
+                "title": 49,
+                "chapter": "XII"
+            }
+        ]
+    },
+    {
+        "name": "U.S. Customs and Border Protection",
+        "slug": "u-s-customs-and-border-protection",
+        "cfr_references": [
+            {
+                "title": 19,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Department of Housing and Urban Development",
+        "slug": "housing-and-urban-development-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXIV"
+            },
+            {
+                "title": 5,
+                "chapter": "LXV"
+            },
+            {
+                "title": 24,
+                "chapter": "XV"
+            },
+            {
+                "title": 48,
+                "chapter": "24"
+            }
+        ]
+    },
+    {
+        "name": "Government National Mortgage Association",
+        "slug": "government-national-mortgage-association",
+        "cfr_references": [
+            {
+                "title": 24,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Office of Assistant Secretary for Community Planning and Development",
+        "slug": "office-of-assistant-secretary-for-community-planning-and-development",
+        "cfr_references": [
+            {
+                "title": 24,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Office of Assistant Secretary for Equal Opportunity",
+        "slug": "office-of-assistant-secretary-for-equal-opportunity",
+        "cfr_references": [
+            {
+                "title": 24,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Office of Assistant Secretary for Housing - Federal Housing Commissioner",
+        "slug": "office-of-assistant-secretary-for-housing---federal-housing-commissioner",
+        "cfr_references": [
+            {
+                "title": 24,
+                "chapter": "II"
+            },
+            {
+                "title": 24,
+                "chapter": "VIII"
+            },
+            {
+                "title": 24,
+                "chapter": "XX"
+            }
+        ]
+    },
+    {
+        "name": "Office of Assistant Secretary for Public and Indian Housing",
+        "slug": "office-of-assistant-secretary-for-public-and-indian-housing",
+        "cfr_references": [
+            {
+                "title": 24,
+                "chapter": "IX"
+            }
+        ]
+    },
+    {
+        "name": "Office of Federal Housing Enterprise Oversight",
+        "slug": "office-of-federal-housing-enterprise-oversight",
+        "cfr_references": [
+            {
+                "title": 12,
+                "chapter": "XVII"
+            }
+        ]
+    },
+    {
+        "name": "Office of Housing and Multifamily Housing Assistance Restructuring",
+        "slug": "office-of-housing-and-multifamily-housing-assistance-restructuring",
+        "cfr_references": [
+            {
+                "title": 24,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Office of Inspector General, Housing and Urban Development",
+        "slug": "office-of-inspector-general,-housing-and-urban-development",
+        "cfr_references": [
+            {
+                "title": 24,
+                "chapter": "XII"
+            }
+        ]
+    },
+    {
+        "name": "Office of Secretary",
+        "slug": "office-of-secretary",
+        "cfr_references": [
+            {
+                "title": 24,
+                "chapter": "N/A"
+            }
+        ]
+    },
+    {
+        "name": "Office of Secretary (Housing Assistance Programs and Public and Indian Housing Programs)",
+        "slug": "office-of-secretary-(housing-assistance-programs-and-public-and-indian-housing-programs)",
+        "cfr_references": [
+            {
+                "title": 24,
+                "chapter": "VII"
+            }
+        ]
+    },
+    {
+        "name": "Office of Independent Counsel",
+        "slug": "office-of-independent-counsel",
+        "cfr_references": [
+            {
+                "title": 28,
+                "chapter": "VII"
+            }
+        ]
+    },
+    {
+        "name": "United States Institute of Peace",
+        "slug": "united-states-institute-of-peace",
+        "cfr_references": [
+            {
+                "title": 22,
+                "chapter": "XVII"
+            }
+        ]
+    },
+    {
+        "name": "Inter-American Foundation",
+        "slug": "inter-american-foundation",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LXIII"
+            },
+            {
+                "title": 22,
+                "chapter": "X"
+            }
+        ]
+    },
+    {
+        "name": "Department of Interior",
+        "slug": "interior-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XIV"
+            },
+            {
+                "title": 5,
+                "chapter": "XXV"
+            },
+            {
+                "title": 41,
+                "chapter": "114"
+            },
+            {
+                "title": 48,
+                "chapter": "14"
+            }
+        ]
+    },
+    {
+        "name": "Bureau of Indian Affairs",
+        "slug": "indian-affairs-bureau",
+        "cfr_references": [
+            {
+                "title": 25,
+                "chapter": "I"
+            },
+            {
+                "title": 25,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Bureau of Land Management",
+        "slug": "land-management-bureau",
+        "cfr_references": [
+            {
+                "title": 43,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Bureau of Ocean Energy Management",
+        "slug": "ocean-energy-management-bureau",
+        "cfr_references": [
+            {
+                "title": 30,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Bureau of Reclamation",
+        "slug": "reclamation-bureau",
+        "cfr_references": [
+            {
+                "title": 43,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Bureau of Safety and Environmental Enforcement",
+        "slug": "safety-and-environmental-enforcement-bureau",
+        "cfr_references": [
+            {
+                "title": 30,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Geological Survey",
+        "slug": "geological-survey",
+        "cfr_references": [
+            {
+                "title": 30,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Indian Arts and Crafts Board",
+        "slug": "indian-arts-and-crafts-board",
+        "cfr_references": [
+            {
+                "title": 25,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "National Indian Gaming Commission",
+        "slug": "national-indian-gaming-commission",
+        "cfr_references": [
+            {
+                "title": 25,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "National Park Service",
+        "slug": "national-park-service",
+        "cfr_references": [
+            {
+                "title": 36,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Office of Indian Affairs Assistant Secretary",
+        "slug": "office-of-indian-affairs-assistant-secretary",
+        "cfr_references": [
+            {
+                "title": 25,
+                "chapter": "VI"
+            }
+        ]
+    },
+    {
+        "name": "Office of Natural Resources Revenue",
+        "slug": "natural-resources-revenue-office",
+        "cfr_references": [
+            {
+                "title": 30,
+                "chapter": "XII"
+            }
+        ]
+    },
+    {
+        "name": "Office of Secretary of the Interior",
+        "slug": "office-of-secretary-of-the-interior",
+        "cfr_references": [
+            {
+                "title": 43,
+                "chapter": "N/A"
+            }
+        ]
+    },
+    {
+        "name": "Office of Special Trustee for American Indians",
+        "slug": "special-trustee-for-american-indians-office",
+        "cfr_references": [
+            {
+                "title": 25,
+                "chapter": "VII"
+            }
+        ]
+    },
+    {
+        "name": "Office of Surface Mining Reclamation and Enforcement",
+        "slug": "surface-mining-reclamation-and-enforcement-office",
+        "cfr_references": [
+            {
+                "title": 30,
+                "chapter": "VII"
+            }
+        ]
+    },
+    {
+        "name": "United States Fish and Wildlife Service",
+        "slug": "fish-and-wildlife-service",
+        "cfr_references": [
+            {
+                "title": 50,
+                "chapter": "I"
+            },
+            {
+                "title": 50,
+                "chapter": "IV"
+            },
+            {
+                "title": 50,
+                "chapter": "VI"
+            }
+        ]
+    },
+    {
+        "name": "United States Section United States and Mexico International Boundary and Water Commission",
+        "slug": "international-boundary-and-water-commission-united-states-and-mexico",
+        "cfr_references": [
+            {
+                "title": 22,
+                "chapter": "XI"
+            }
+        ]
+    },
+    {
+        "name": "United States International Development Cooperation Agency",
+        "slug": "united-states-international-development-cooperation-agency",
+        "cfr_references": [
+            {
+                "title": 22,
+                "chapter": "XII"
+            }
+        ]
+    },
+    {
+        "name": "United States International Development Finance Corporation",
+        "slug": "u-s-international-development-finance-corporation",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XVI"
+            },
+            {
+                "title": 5,
+                "chapter": "XXXIII"
+            },
+            {
+                "title": 22,
+                "chapter": "VII"
+            }
+        ]
+    },
+    {
+        "name": "Agency for International Development",
+        "slug": "agency-for-international-development",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "VII"
+            },
+            {
+                "title": 22,
+                "chapter": "II"
+            },
+            {
+                "title": 48,
+                "chapter": "7"
+            }
+        ]
+    },
+    {
+        "name": "United States and Canada International Joint Commission",
+        "slug": "international-joint-commission-united-states-and-canada",
+        "cfr_references": [
+            {
+                "title": 22,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "International Organizations Employees Loyalty Board",
+        "slug": "international-organizations-employees-loyalty-board",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "United States International Trade Commission",
+        "slug": "international-trade-commission",
+        "cfr_references": [
+            {
+                "title": 19,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Interstate Commerce Commission",
+        "slug": "interstate-commerce-commission",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XL"
+            }
+        ]
+    },
+    {
+        "name": "James Madison Memorial Fellowship Foundation",
+        "slug": "james-madison-memorial-fellowship-foundation",
+        "cfr_references": [
+            {
+                "title": 45,
+                "chapter": "XXIV"
+            }
+        ]
+    },
+    {
+        "name": "Japan-United States Friendship Commission",
+        "slug": "japan-united-states-friendship-commission",
+        "cfr_references": [
+            {
+                "title": 22,
+                "chapter": "XVI"
+            }
+        ]
+    },
+    {
+        "name": "Department of Justice",
+        "slug": "justice-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXVIII"
+            },
+            {
+                "title": 5,
+                "chapter": "XXVIII"
+            },
+            {
+                "title": 28,
+                "chapter": "I"
+            },
+            {
+                "title": 28,
+                "chapter": "XI"
+            },
+            {
+                "title": 31,
+                "chapter": "IX"
+            },
+            {
+                "title": 40,
+                "chapter": "IV"
+            },
+            {
+                "title": 41,
+                "chapter": "128"
+            },
+            {
+                "title": 48,
+                "chapter": "28"
+            }
+        ]
+    },
+    {
+        "name": "Bureau of Alcohol, Tobacco, Firearms, and Explosives",
+        "slug": "alcohol-tobacco-firearms-and-explosives-bureau",
+        "cfr_references": [
+            {
+                "title": 27,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Bureau of Prisons",
+        "slug": "prisons-bureau",
+        "cfr_references": [
+            {
+                "title": 28,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Drug Enforcement Administration",
+        "slug": "drug-enforcement-administration",
+        "cfr_references": [
+            {
+                "title": 21,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Executive Office for Immigration Review",
+        "slug": "executive-office-for-immigration-review",
+        "cfr_references": [
+            {
+                "title": 8,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Federal Prison Industries",
+        "slug": "federal-prison-industries",
+        "cfr_references": [
+            {
+                "title": 28,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Foreign Claims Settlement Commission of the United States",
+        "slug": "foreign-claims-settlement-commission",
+        "cfr_references": [
+            {
+                "title": 45,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Offices of Independent Counsel",
+        "slug": "offices-of-independent-counsel",
+        "cfr_references": [
+            {
+                "title": 28,
+                "chapter": "VI"
+            }
+        ]
+    },
+    {
+        "name": "Department of Labor",
+        "slug": "labor-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXIX"
+            },
+            {
+                "title": 5,
+                "chapter": "XLII"
+            },
+            {
+                "title": 41,
+                "chapter": "50"
+            },
+            {
+                "title": 48,
+                "chapter": "29"
+            }
+        ]
+    },
+    {
+        "name": "Benefits Review Board",
+        "slug": "benefits-review-board",
+        "cfr_references": [
+            {
+                "title": 20,
+                "chapter": "VII"
+            }
+        ]
+    },
+    {
+        "name": "Employee Benefits Security Administration",
+        "slug": "employee-benefits-security-administration",
+        "cfr_references": [
+            {
+                "title": 29,
+                "chapter": "XXV"
+            }
+        ]
+    },
+    {
+        "name": "Employees' Compensation Appeals Board",
+        "slug": "employees-compensation-appeals-board",
+        "cfr_references": [
+            {
+                "title": 20,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Employment and Training Administration",
+        "slug": "employment-and-training-administration",
+        "cfr_references": [
+            {
+                "title": 20,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Mine Safety and Health Administration",
+        "slug": "mine-safety-and-health-administration",
+        "cfr_references": [
+            {
+                "title": 30,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Occupational Safety and Health Administration",
+        "slug": "occupational-safety-and-health-administration",
+        "cfr_references": [
+            {
+                "title": 29,
+                "chapter": "XVII"
+            }
+        ]
+    },
+    {
+        "name": "Office of Assistant Secretary for Veterans' Employment and Training Service",
+        "slug": "office-of-assistant-secretary-for-veterans'-employment-and-training-service",
+        "cfr_references": [
+            {
+                "title": 20,
+                "chapter": "IX"
+            },
+            {
+                "title": 41,
+                "chapter": "61"
+            }
+        ]
+    },
+    {
+        "name": "Office of Federal Contract Compliance Programs",
+        "slug": "federal-contract-compliance-programs-office",
+        "cfr_references": [
+            {
+                "title": 41,
+                "chapter": "60"
+            }
+        ]
+    },
+    {
+        "name": "Office of Labor-Management Standards",
+        "slug": "labor-management-standards-office",
+        "cfr_references": [
+            {
+                "title": 29,
+                "chapter": "II"
+            },
+            {
+                "title": 29,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Office of Secretary of Labor",
+        "slug": "office-of-secretary-of-labor",
+        "cfr_references": [
+            {
+                "title": 29,
+                "chapter": "N/A"
+            }
+        ]
+    },
+    {
+        "name": "Office of Workers' Compensation Programs",
+        "slug": "workers-compensation-programs-office",
+        "cfr_references": [
+            {
+                "title": 20,
+                "chapter": "I"
+            },
+            {
+                "title": 20,
+                "chapter": "VI"
+            }
+        ]
+    },
+    {
+        "name": "Wage and Hour Division",
+        "slug": "wage-and-hour-division",
+        "cfr_references": [
+            {
+                "title": 29,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Legal Services Corporation",
+        "slug": "legal-services-corporation",
+        "cfr_references": [
+            {
+                "title": 45,
+                "chapter": "XVI"
+            }
+        ]
+    },
+    {
+        "name": "National Commission on Libraries and Information Science",
+        "slug": "national-commission-on-libraries-and-information-science",
+        "cfr_references": [
+            {
+                "title": 45,
+                "chapter": "XVII"
+            }
+        ]
+    },
+    {
+        "name": "Library of Congress",
+        "slug": "library-of-congress",
+        "cfr_references": [
+            {
+                "title": 36,
+                "chapter": "VII"
+            }
+        ]
+    },
+    {
+        "name": "Copyright Royalty Board",
+        "slug": "copyright-royalty-board",
+        "cfr_references": [
+            {
+                "title": 37,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "U.S. Copyright Office",
+        "slug": "copyright-office-library-of-congress",
+        "cfr_references": [
+            {
+                "title": 37,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Office of Management and Budget",
+        "slug": "management-and-budget-office",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "N/A"
+            },
+            {
+                "title": 5,
+                "chapter": "III"
+            },
+            {
+                "title": 5,
+                "chapter": "LXXVII"
+            },
+            {
+                "title": 48,
+                "chapter": "99"
+            }
+        ]
+    },
+    {
+        "name": "Office of Federal Procurement Policy",
+        "slug": "federal-procurement-policy-office",
+        "cfr_references": [
+            {
+                "title": 48,
+                "chapter": "99"
+            }
+        ]
+    },
+    {
+        "name": "Marine Mammal Commission",
+        "slug": "marine-mammal-commission",
+        "cfr_references": [
+            {
+                "title": 50,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Merit Systems Protection Board",
+        "slug": "merit-systems-protection-board",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "II"
+            },
+            {
+                "title": 5,
+                "chapter": "LXIV"
+            }
+        ]
+    },
+    {
+        "name": "Office for Micronesian Status Negotiations",
+        "slug": "office-for-micronesian-status-negotiations",
+        "cfr_references": [
+            {
+                "title": 32,
+                "chapter": "XXVII"
+            }
+        ]
+    },
+    {
+        "name": "Military Compensation and Retirement Modernization Commission",
+        "slug": "military-compensation-and-retirement-modernization-commission",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XCIX"
+            }
+        ]
+    },
+    {
+        "name": "National Commission on Military, National, and Public Service",
+        "slug": "national-commission-on-military-national-and-public-service",
+        "cfr_references": [
+            {
+                "title": 1,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Millennium Challenge Corporation",
+        "slug": "millennium-challenge-corporation",
+        "cfr_references": [
+            {
+                "title": 22,
+                "chapter": "XIII"
+            }
+        ]
+    },
+    {
+        "name": "Morris K. Udall and Stewart L. Udall Foundation",
+        "slug": "morris-k-udall-and-stewart-l-udall-foundation",
+        "cfr_references": [
+            {
+                "title": 36,
+                "chapter": "XVI"
+            }
+        ]
+    },
+    {
+        "name": "National Aeronautics and Space Administration",
+        "slug": "national-aeronautics-and-space-administration",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XVIII"
+            },
+            {
+                "title": 5,
+                "chapter": "LIX"
+            },
+            {
+                "title": 14,
+                "chapter": "V"
+            },
+            {
+                "title": 48,
+                "chapter": "18"
+            }
+        ]
+    },
+    {
+        "name": "Corporation for National and Community Service",
+        "slug": "corporation-for-national-and-community-service",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXII"
+            },
+            {
+                "title": 45,
+                "chapter": "XII"
+            },
+            {
+                "title": 45,
+                "chapter": "XXV"
+            }
+        ]
+    },
+    {
+        "name": "National Archives and Records Administration",
+        "slug": "national-archives-and-records-administration",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXVI"
+            },
+            {
+                "title": 5,
+                "chapter": "LXVI"
+            },
+            {
+                "title": 36,
+                "chapter": "XII"
+            }
+        ]
+    },
+    {
+        "name": "Information Security Oversight Office",
+        "slug": "information-security-oversight-office",
+        "cfr_references": [
+            {
+                "title": 32,
+                "chapter": "XX"
+            }
+        ]
+    },
+    {
+        "name": "Office of Federal Register",
+        "slug": "federal-register-office",
+        "cfr_references": [
+            {
+                "title": 1,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "National Capital Planning Commission",
+        "slug": "national-capital-planning-commission",
+        "cfr_references": [
+            {
+                "title": 1,
+                "chapter": "IV"
+            },
+            {
+                "title": 1,
+                "chapter": "VI"
+            }
+        ]
+    },
+    {
+        "name": "National Counterintelligence Center",
+        "slug": "national-counterintelligence-center",
+        "cfr_references": [
+            {
+                "title": 32,
+                "chapter": "XVIII"
+            }
+        ]
+    },
+    {
+        "name": "National Credit Union Administration",
+        "slug": "national-credit-union-administration",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LXXXVI"
+            },
+            {
+                "title": 12,
+                "chapter": "VII"
+            }
+        ]
+    },
+    {
+        "name": "National Crime Prevention and Privacy Compact Council",
+        "slug": "national-crime-prevention-and-privacy-compact-council",
+        "cfr_references": [
+            {
+                "title": 28,
+                "chapter": "IX"
+            }
+        ]
+    },
+    {
+        "name": "Office of National Drug Control Policy",
+        "slug": "office-of-national-drug-control-policy",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXXVI"
+            },
+            {
+                "title": 21,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "National Foundation on the Arts and the Humanities",
+        "slug": "national-foundation-on-the-arts-and-the-humanities",
+        "cfr_references": [
+            {
+                "title": 45,
+                "chapter": "XI"
+            }
+        ]
+    },
+    {
+        "name": "Institute of Museum and Library Services",
+        "slug": "institute-of-museum-and-library-services",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXXI"
+            },
+            {
+                "title": 5,
+                "chapter": "LXVII"
+            }
+        ]
+    },
+    {
+        "name": "National Endowment for the Arts",
+        "slug": "national-endowment-for-the-arts",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXXII"
+            },
+            {
+                "title": 5,
+                "chapter": "LV"
+            }
+        ]
+    },
+    {
+        "name": "National Endowment for the Humanities",
+        "slug": "national-endowment-for-the-humanities",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXXIII"
+            },
+            {
+                "title": 5,
+                "chapter": "LVI"
+            }
+        ]
+    },
+    {
+        "name": "National Labor Relations Board",
+        "slug": "national-labor-relations-board",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LXI"
+            },
+            {
+                "title": 29,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "National Mediation Board",
+        "slug": "national-mediation-board",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "CI"
+            },
+            {
+                "title": 29,
+                "chapter": "X"
+            }
+        ]
+    },
+    {
+        "name": "National Railroad Adjustment Board",
+        "slug": "national-railroad-adjustment-board",
+        "cfr_references": [
+            {
+                "title": 29,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "National Railroad Passenger Corporation",
+        "slug": "national-railroad-passenger-corporation",
+        "cfr_references": [
+            {
+                "title": 49,
+                "chapter": "VII"
+            }
+        ]
+    },
+    {
+        "name": "National Science Foundation",
+        "slug": "national-science-foundation",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXV"
+            },
+            {
+                "title": 5,
+                "chapter": "XLIII"
+            },
+            {
+                "title": 45,
+                "chapter": "VI"
+            },
+            {
+                "title": 48,
+                "chapter": "25"
+            }
+        ]
+    },
+    {
+        "name": "National Transportation Safety Board",
+        "slug": "national-transportation-safety-board",
+        "cfr_references": [
+            {
+                "title": 49,
+                "chapter": "VIII"
+            }
+        ]
+    },
+    {
+        "name": "Office of Navajo and Hopi Indian Relocation",
+        "slug": "navajo-and-hopi-indian-relocation-office",
+        "cfr_references": [
+            {
+                "title": 25,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Neighborhood Reinvestment Corporation",
+        "slug": "neighborhood-reinvestment-corporation",
+        "cfr_references": [
+            {
+                "title": 24,
+                "chapter": "XXV"
+            }
+        ]
+    },
+    {
+        "name": "Northeast Interstate Low-Level Radioactive Waste Commission",
+        "slug": "northeast-interstate-low-level-radioactive-waste-commission",
+        "cfr_references": [
+            {
+                "title": 10,
+                "chapter": "XVIII"
+            }
+        ]
+    },
+    {
+        "name": "Nuclear Regulatory Commission",
+        "slug": "nuclear-regulatory-commission",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XX"
+            },
+            {
+                "title": 5,
+                "chapter": "XLVIII"
+            },
+            {
+                "title": 10,
+                "chapter": "I"
+            },
+            {
+                "title": 48,
+                "chapter": "20"
+            }
+        ]
+    },
+    {
+        "name": "Nuclear Waste Technical Review Board",
+        "slug": "nuclear-waste-technical-review-board",
+        "cfr_references": [
+            {
+                "title": 10,
+                "chapter": "XIII"
+            }
+        ]
+    },
+    {
+        "name": "Occupational Safety and Health Review Commission",
+        "slug": "occupational-safety-and-health-review-commission",
+        "cfr_references": [
+            {
+                "title": 29,
+                "chapter": "XX"
+            }
+        ]
+    },
+    {
+        "name": "Oklahoma City National Memorial Trust",
+        "slug": "oklahoma-city-national-memorial-trust",
+        "cfr_references": [
+            {
+                "title": 36,
+                "chapter": "XV"
+            }
+        ]
+    },
+    {
+        "name": "Peace Corps",
+        "slug": "peace-corps",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXXVII"
+            },
+            {
+                "title": 22,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Pennsylvania Avenue Development Corporation",
+        "slug": "pennsylvania-avenue-development-corporation",
+        "cfr_references": [
+            {
+                "title": 36,
+                "chapter": "IX"
+            }
+        ]
+    },
+    {
+        "name": "Pension Benefit Guaranty Corporation",
+        "slug": "pension-benefit-guaranty-corporation",
+        "cfr_references": [
+            {
+                "title": 29,
+                "chapter": "XL"
+            }
+        ]
+    },
+    {
+        "name": "Office of Personnel Management",
+        "slug": "personnel-management-office",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "I"
+            },
+            {
+                "title": 5,
+                "chapter": "IV"
+            },
+            {
+                "title": 5,
+                "chapter": "XXXV"
+            },
+            {
+                "title": 45,
+                "chapter": "VIII"
+            },
+            {
+                "title": 48,
+                "chapter": "16"
+            },
+            {
+                "title": 48,
+                "chapter": "17"
+            },
+            {
+                "title": 48,
+                "chapter": "21"
+            }
+        ]
+    },
+    {
+        "name": "Postal Regulatory Commission",
+        "slug": "postal-regulatory-commission",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XLVI"
+            },
+            {
+                "title": 39,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "United States Postal Service",
+        "slug": "postal-service",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LX"
+            },
+            {
+                "title": 39,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Presidio Trust",
+        "slug": "presidio-trust",
+        "cfr_references": [
+            {
+                "title": 36,
+                "chapter": "X"
+            }
+        ]
+    },
+    {
+        "name": "Privacy and Civil Liberties Oversight Board",
+        "slug": "privacy-and-civil-liberties-oversight-board",
+        "cfr_references": [
+            {
+                "title": 6,
+                "chapter": "X"
+            }
+        ]
+    },
+    {
+        "name": "Railroad Retirement Board",
+        "slug": "railroad-retirement-board",
+        "cfr_references": [
+            {
+                "title": 20,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Securities and Exchange Commission",
+        "slug": "securities-and-exchange-commission",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "XXXIV"
+            },
+            {
+                "title": 17,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Selective Service System",
+        "slug": "selective-service-system",
+        "cfr_references": [
+            {
+                "title": 32,
+                "chapter": "XVI"
+            }
+        ]
+    },
+    {
+        "name": "Small Business Administration",
+        "slug": "small-business-administration",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXVII"
+            },
+            {
+                "title": 13,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Smithsonian Institution",
+        "slug": "smithsonian-institution",
+        "cfr_references": [
+            {
+                "title": 36,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Social Security Administration",
+        "slug": "social-security-administration",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XXIII"
+            },
+            {
+                "title": 20,
+                "chapter": "III"
+            },
+            {
+                "title": 48,
+                "chapter": "23"
+            }
+        ]
+    },
+    {
+        "name": "Office of Special Counsel",
+        "slug": "special-counsel-office",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "VIII"
+            },
+            {
+                "title": 5,
+                "chapter": "CII"
+            }
+        ]
+    },
+    {
+        "name": "Department of State",
+        "slug": "state-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "VI"
+            },
+            {
+                "title": 22,
+                "chapter": "I"
+            },
+            {
+                "title": 28,
+                "chapter": "XI"
+            },
+            {
+                "title": 48,
+                "chapter": "6"
+            }
+        ]
+    },
+    {
+        "name": "Surface Transportation Board",
+        "slug": "surface-transportation-board",
+        "cfr_references": [
+            {
+                "title": 49,
+                "chapter": "X"
+            }
+        ]
+    },
+    {
+        "name": "Susquehanna River Basin Commission",
+        "slug": "susquehanna-river-basin-commission",
+        "cfr_references": [
+            {
+                "title": 18,
+                "chapter": "VIII"
+            }
+        ]
+    },
+    {
+        "name": "Tennessee Valley Authority",
+        "slug": "tennessee-valley-authority",
+        "cfr_references": [
+            {
+                "title": 5,
+                "chapter": "LXIX"
+            },
+            {
+                "title": 18,
+                "chapter": "XIII"
+            }
+        ]
+    },
+    {
+        "name": "Department of Transportation",
+        "slug": "transportation-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "XII"
+            },
+            {
+                "title": 5,
+                "chapter": "L"
+            },
+            {
+                "title": 44,
+                "chapter": "IV"
+            },
+            {
+                "title": 48,
+                "chapter": "12"
+            }
+        ]
+    },
+    {
+        "name": "Federal Aviation Administration",
+        "slug": "federal-aviation-administration",
+        "cfr_references": [
+            {
+                "title": 14,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Federal Aviation Administration Commercial Space Transportation",
+        "slug": "commercial-space-transportation-office",
+        "cfr_references": [
+            {
+                "title": 14,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Federal Highway Administration",
+        "slug": "federal-highway-administration",
+        "cfr_references": [
+            {
+                "title": 23,
+                "chapter": "I"
+            },
+            {
+                "title": 23,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Federal Motor Carrier Safety Administration",
+        "slug": "federal-motor-carrier-safety-administration",
+        "cfr_references": [
+            {
+                "title": 49,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Federal Railroad Administration",
+        "slug": "federal-railroad-administration",
+        "cfr_references": [
+            {
+                "title": 49,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Federal Transit Administration",
+        "slug": "federal-transit-administration",
+        "cfr_references": [
+            {
+                "title": 49,
+                "chapter": "VI"
+            }
+        ]
+    },
+    {
+        "name": "Great Lakes St. Lawrence Seaway Development Corporation",
+        "slug": "great-lakes-st-lawrence-seaway-development-corporation",
+        "cfr_references": [
+            {
+                "title": 33,
+                "chapter": "IV"
+            }
+        ]
+    },
+    {
+        "name": "Maritime Administration",
+        "slug": "maritime-administration",
+        "cfr_references": [
+            {
+                "title": 46,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "National Highway Traffic Safety Administration",
+        "slug": "national-highway-traffic-safety-administration",
+        "cfr_references": [
+            {
+                "title": 23,
+                "chapter": "II"
+            },
+            {
+                "title": 23,
+                "chapter": "III"
+            },
+            {
+                "title": 47,
+                "chapter": "IV"
+            },
+            {
+                "title": 49,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Office of Secretary (Aviation Proceedings)",
+        "slug": "office-of-secretary-(aviation-proceedings)",
+        "cfr_references": [
+            {
+                "title": 14,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Office of Secretary of Transportation",
+        "slug": "office-of-secretary-of-transportation",
+        "cfr_references": [
+            {
+                "title": 49,
+                "chapter": "N/A"
+            }
+        ]
+    },
+    {
+        "name": "Pipeline and Hazardous Materials Safety Administration",
+        "slug": "pipeline-and-hazardous-materials-safety-administration",
+        "cfr_references": [
+            {
+                "title": 49,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Department of Treasury",
+        "slug": "treasury-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "X"
+            },
+            {
+                "title": 5,
+                "chapter": "XXI"
+            },
+            {
+                "title": 12,
+                "chapter": "XV"
+            },
+            {
+                "title": 17,
+                "chapter": "IV"
+            },
+            {
+                "title": 31,
+                "chapter": "IX"
+            },
+            {
+                "title": 48,
+                "chapter": "10"
+            }
+        ]
+    },
+    {
+        "name": "Alcohol and Tobacco Tax and Trade Bureau",
+        "slug": "alcohol-and-tobacco-tax-and-trade-bureau",
+        "cfr_references": [
+            {
+                "title": 27,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Bureau of Engraving and Printing",
+        "slug": "engraving-and-printing-bureau",
+        "cfr_references": [
+            {
+                "title": 31,
+                "chapter": "VI"
+            }
+        ]
+    },
+    {
+        "name": "Bureau of the Fiscal Service",
+        "slug": "bureau-of-the-fiscal-service",
+        "cfr_references": [
+            {
+                "title": 31,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Community Development Financial Institutions Fund",
+        "slug": "community-development-financial-institutions-fund",
+        "cfr_references": [
+            {
+                "title": 12,
+                "chapter": "XVIII"
+            }
+        ]
+    },
+    {
+        "name": "Comptroller of the Currency",
+        "slug": "comptroller-of-the-currency",
+        "cfr_references": [
+            {
+                "title": 12,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Financial Crimes Enforcement Network",
+        "slug": "financial-crimes-enforcement-network",
+        "cfr_references": [
+            {
+                "title": 31,
+                "chapter": "X"
+            }
+        ]
+    },
+    {
+        "name": "Fiscal Service",
+        "slug": "fiscal-service",
+        "cfr_references": [
+            {
+                "title": 31,
+                "chapter": "II"
+            }
+        ]
+    },
+    {
+        "name": "Internal Revenue Service",
+        "slug": "internal-revenue-service",
+        "cfr_references": [
+            {
+                "title": 26,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Monetary Offices",
+        "slug": "monetary-offices",
+        "cfr_references": [
+            {
+                "title": 31,
+                "chapter": "I"
+            }
+        ]
+    },
+    {
+        "name": "Office of Financial Research",
+        "slug": "office-of-financial-research",
+        "cfr_references": [
+            {
+                "title": 12,
+                "chapter": "XVI"
+            }
+        ]
+    },
+    {
+        "name": "Office of Foreign Assets Control",
+        "slug": "foreign-assets-control-office",
+        "cfr_references": [
+            {
+                "title": 31,
+                "chapter": "V"
+            }
+        ]
+    },
+    {
+        "name": "Office of Investment Security",
+        "slug": "investment-security-office",
+        "cfr_references": [
+            {
+                "title": 31,
+                "chapter": "VIII"
+            }
+        ]
+    },
+    {
+        "name": "Office of Secretary of the Treasury",
+        "slug": "office-of-secretary-of-the-treasury",
+        "cfr_references": [
+            {
+                "title": 31,
+                "chapter": "N/A"
+            }
+        ]
+    },
+    {
+        "name": "Office of United States Trade Representative",
+        "slug": "trade-representative-office-of-united-states",
+        "cfr_references": [
+            {
+                "title": 15,
+                "chapter": "XX"
+            }
+        ]
+    },
+    {
+        "name": "Utah Reclamation Mitigation and Conservation Commission",
+        "slug": "utah-reclamation-mitigation-and-conservation-commission",
+        "cfr_references": [
+            {
+                "title": 43,
+                "chapter": "III"
+            }
+        ]
+    },
+    {
+        "name": "Department of Veterans Affairs",
+        "slug": "veterans-affairs-department",
+        "cfr_references": [
+            {
+                "title": 2,
+                "chapter": "VIII"
+            },
+            {
+                "title": 38,
+                "chapter": "I"
+            },
+            {
+                "title": 48,
+                "chapter": "8"
+            }
+        ]
+    },
+    {
+        "name": "Office of Vice President of the United States",
+        "slug": "office-of-vice-president-of-the-united-states",
+        "cfr_references": [
+            {
+                "title": 32,
+                "chapter": "XXVIII"
+            }
+        ]
+    },
+    {
+        "name": "Water Resources Council",
+        "slug": "water-resources-council",
+        "cfr_references": [
+            {
+                "title": 18,
+                "chapter": "VI"
+            }
+        ]
+    },
+    {
+        "name": "President's Commission on White House Fellowships",
+        "slug": "president's-commission-on-white-house-fellowships",
+        "cfr_references": [
+            {
+                "title": 1,
+                "chapter": "IV"
+            }
+        ]
+    }
+]
