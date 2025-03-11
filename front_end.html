@@ -4,189 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Count Stacked Bar Chart</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+    
+    <!-- Load PapaParse -->
+    <script src="https://unpkg.com/papaparse@5.3.0/papaparse.min.js"></script>
+    
+    <!-- Load Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-        #chart {
-            width: 80%;
-            height: 500px;
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #chart-container {
+            width: 90vw;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin: auto;
         }
-
-        .bar {
-            cursor: pointer;
+        canvas {
+            width: 100% !important;
+            height: 100% !important;
         }
-
-        #update-time {
+        table {
             margin-top: 20px;
-            font-size: 14px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
         }
-
-        .axis text {
-            font-size: 12px;
+        table, th, td {
+            border: 1px solid black;
         }
-
-        .axis path,
-        .axis line {
-            fill: none;
-            shape-rendering: crispEdges;
-        }
-
-        #debug-info {
-            margin-top: 30px;
-        }
-
-        #debug-info pre {
-            background-color: #f4f4f4;
+        th, td {
             padding: 10px;
-            border-radius: 5px;
-            font-size: 12px;
+            text-align: left;
         }
     </style>
 </head>
 <body>
-
     <h1>Word Count Stacked Bar Chart</h1>
-    <div id="chart"></div>
-    <div id="update-time">Last updated: </div>
-
-    <div id="debug-info">
-        <h2>Debugging Information:</h2>
-        <p><strong>Loaded Data:</strong></p>
-        <pre id="raw-data">Loading raw data...</pre>
-        <p><strong>Aggregated Data:</strong></p>
-        <pre id="aggregated-data">Aggregating data...</pre>
+    <p id="status">Loading data...</p>
+    <div id="chart-container">
+        <canvas id="wordCountChart"></canvas>
     </div>
+    
+    <div id="agency-table-container"></div>
 
-    <script src="https://d3js.org/d3.v6.min.js"></script>
     <script>
-        // Function to load CSV data
-        async function loadCSVData() {
-            try {
-                const response = await fetch('word_counts.csv');
-                const text = await response.text();
-                const data = d3.csvParse(text);
-
-                // Display raw data on the page
-                document.getElementById("raw-data").textContent = JSON.stringify(data, null, 2);
-
-                return data;
-            } catch (error) {
-                document.getElementById("raw-data").textContent = "Error loading CSV data: " + error.message;
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof Papa === "undefined") {
+                console.error("PapaParse failed to load!");
+                document.getElementById("status").textContent = "Error: CSV parser failed to load.";
+                return;
+            } else {
+                console.log("PapaParse loaded successfully.");
             }
-        }
 
-        // Aggregate the data by Agency and Chapter
-        function aggregateData(data) {
-            try {
-                const agencyData = d3.nest()
-                    .key(d => d.Agency)
-                    .key(d => d.Chapter)
-                    .rollup(leaves => d3.sum(leaves, d => +d["Word Count"]))
-                    .entries(data);
+            fetch("word_counts.csv")
+                .then(response => {
+                    if (!response.ok) throw new Error("Failed to load CSV file.");
+                    return response.text();
+                })
+                .then(csvText => {
+                    console.log("CSV Loaded Successfully");
+                    document.getElementById("status").style.display = "none";
+                    const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
 
-                // Display aggregated data on the page
-                document.getElementById("aggregated-data").textContent = JSON.stringify(agencyData, null, 2);
+                    if (!parsed.data.length) throw new Error("CSV file is empty.");
+                    console.log("Parsed Data:", parsed.data);
 
-                return agencyData;
-            } catch (error) {
-                document.getElementById("aggregated-data").textContent = "Error aggregating data: " + error.message;
-            }
-        }
+                    const aggregatedData = {};
+                    const titleSet = new Set();
 
-        // Create the chart based on the fetched data
-        function createChart(aggregatedData) {
-            const margin = {top: 20, right: 30, bottom: 40, left: 40};
-            const width = 900 - margin.left - margin.right;
-            const height = 500 - margin.top - margin.bottom;
+                    parsed.data.forEach(row => {
+                        const agency = row["Agency"];
+                        const title = `Title ${row["Title"]}`;
+                        const wordCount = parseInt(row["Word Count"], 10) || 0;
 
-            // Remove previous chart if exists
-            d3.select('#chart').select('svg').remove();
+                        titleSet.add(title);
+                        if (!aggregatedData[agency]) aggregatedData[agency] = { Agency: agency };
+                        aggregatedData[agency][title] = (aggregatedData[agency][title] || 0) + wordCount;
+                    });
 
-            const svg = d3.select("#chart").append("svg")
-                .attr("width", width + margin.left + margin.right)
-                .attr("height", height + margin.top + margin.bottom)
-                .append("g")
-                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+                    const agencies = Object.keys(aggregatedData);
+                    let titles = Array.from(titleSet);
 
-            const x0 = d3.scaleBand().rangeRound([0, width]).padding(0.1);
-            const x1 = d3.scaleBand();
-            const y = d3.scaleLinear().rangeRound([height, 0]);
+                    // Sort titles based on their numeric order (e.g., Title 1, Title 2, Title 3, etc.)
+                    titles.sort((a, b) => {
+                        const numA = parseInt(a.split(' ')[1]);
+                        const numB = parseInt(b.split(' ')[1]);
+                        return numA - numB;
+                    });
 
-            const color = d3.scaleOrdinal(d3.schemeCategory10);
+                    console.log("Agencies:", agencies);
+                    console.log("Titles:", titles);
 
-            // Get list of agencies and chapters
-            const agencies = aggregatedData.map(d => d.key);
-            const chapters = [...new Set(aggregatedData.flatMap(d => d.values.map(v => v.key)))];
+                    const agencyNumbers = agencies.sort().reduce((acc, agency, index) => {
+                        acc[agency] = index + 1; // Numbering agencies starting from 1
+                        return acc;
+                    }, {});
 
-            x0.domain(agencies);
-            x1.domain(chapters).rangeRound([0, x0.bandwidth()]);
-            y.domain([0, d3.max(aggregatedData, agency => d3.sum(agency.values, chapter => chapter.value))]).nice();
+                    const datasets = titles.map((title, index) => ({
+                        label: title,
+                        data: agencies.map(agency => aggregatedData[agency][title] || 0),
+                        backgroundColor: `hsl(${(index * 50) % 360}, 70%, 50%)`
+                    }));
 
-            // Create the bars for each chapter within each agency
-            svg.append("g")
-                .selectAll("g")
-                .data(aggregatedData)
-                .enter().append("g")
-                .attr("transform", d => "translate(" + x0(d.key) + ",0)")
-                .selectAll("rect")
-                .data(d => d.values)
-                .enter().append("rect")
-                .attr("x", d => x1(d.key))
-                .attr("y", d => y(d.value))
-                .attr("width", x1.bandwidth())
-                .attr("height", d => height - y(d.value))
-                .attr("fill", d => color(d.key));
+                    console.log("Datasets:", datasets);
 
-            // Add labels with the total word count for each agency
-            svg.append("g")
-                .selectAll(".bar")
-                .data(aggregatedData)
-                .enter().append("text")
-                .attr("x", d => x0(d.key) + x1.bandwidth() / 2)
-                .attr("y", d => y(d3.sum(d.values, v => v.value)) + 5)
-                .attr("text-anchor", "middle")
-                .text(d => d3.sum(d.values, v => v.value));
+                    const ctx = document.getElementById("wordCountChart").getContext("2d");
+                    new Chart(ctx, {
+                        type: "bar",
+                        data: { labels: agencies.map(agency => agencyNumbers[agency]), datasets: datasets },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: { 
+                                legend: { 
+                                    position: "top" 
+                                }, 
+                                tooltip: {
+                                    mode: "index",
+                                    intersect: false,
+                                    callbacks: {
+                                        // Modify tooltip header to include agency name and number
+                                        title: function (tooltipItem) {
+                                            const agency = agencies[tooltipItem[0].dataIndex]; // Get agency name
+                                            const agencyNumber = agencyNumbers[agency]; // Get agency number
+                                            return `${agency} (${agencyNumber})`; // Title will show agency name and number in parentheses
+                                        },
+                                        // Modify tooltip body to show the word count for the title
+                                        label: function (tooltipItem) {
+                                            const dataset = tooltipItem.dataset;
+                                            const value = dataset.data[tooltipItem.dataIndex];
+                                            return value > 0 ? `${dataset.label}: ${value}` : null; // Title and word count
+                                        }
+                                    }
+                                }
+                            },
+                            scales: { 
+                                x: { stacked: true }, 
+                                y: { stacked: true }
+                            }
+                        }
+                    });
 
-            // Add x-axis
-            svg.append("g")
-                .attr("class", "x axis")
-                .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x0))
-                .selectAll("text")
-                .style("text-anchor", "middle");
+                    // Create table for agencies
+                    const sortedAgencies = Object.keys(agencyNumbers)
+                        .sort((a, b) => a.localeCompare(b))
+                        .map(agency => `<tr><td>${agencyNumbers[agency]}</td><td>${agency}</td></tr>`).join("");
 
-            // Add y-axis
-            svg.append("g")
-                .attr("class", "y axis")
-                .call(d3.axisLeft(y));
-
-            // Add axis labels
-            svg.append("text")
-                .attr("transform", "rotate(-90)")
-                .attr("x", -height / 2)
-                .attr("y", -margin.left + 20)
-                .attr("dy", ".71em")
-                .style("text-anchor", "middle")
-                .text("Word Count");
-
-            svg.append("text")
-                .attr("x", width / 2)
-                .attr("y", height + margin.bottom - 10)
-                .style("text-anchor", "middle")
-                .text("Agency");
-        }
-
-        // Initialize the chart with data from the CSV
-        loadCSVData().then(data => {
-            if (data) {
-                const aggregatedData = aggregateData(data);
-                createChart(aggregatedData);
-            }
+                    const tableHTML = `
+                        <table>
+                            <thead>
+                                <tr><th>Number</th><th>Agency</th></tr>
+                            </thead>
+                            <tbody>
+                                ${sortedAgencies}
+                            </tbody>
+                        </table>
+                    `;
+                    document.getElementById("agency-table-container").innerHTML = tableHTML;
+                })
+                .catch(error => {
+                    document.getElementById("status").textContent = "Error loading data: " + error.message;
+                    console.error("Error:", error);
+                });
         });
-
     </script>
 </body>
 </html>
