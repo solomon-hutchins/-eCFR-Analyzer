@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Count Stacked Bar Chart</title>
-    
+
     <!-- Load PapaParse -->
     <script src="https://unpkg.com/papaparse@5.3.0/papaparse.min.js"></script>
     
@@ -27,7 +27,7 @@
         }
         table {
             margin-top: 20px;
-            width: 80%;
+            width: 30%;
             margin-left: auto;
             margin-right: auto;
             border-collapse: collapse;
@@ -39,137 +39,173 @@
             padding: 10px;
             text-align: left;
         }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
-    <h1>Word Count Stacked Bar Chart</h1>
+    <h1>eCFR Word Count by Agency and Title</h1>
     <p id="status">Loading data...</p>
     <div id="chart-container">
         <canvas id="wordCountChart"></canvas>
     </div>
     
+    <!-- Refresh button -->
+    <button id="refreshButton">Refresh Graph</button>
+
+    <!-- Agency table -->
     <div id="agency-table-container"></div>
 
     <script>
+        let chartInstance = null; // Store chart instance globally
+
         document.addEventListener("DOMContentLoaded", function () {
-            if (typeof Papa === "undefined") {
-                console.error("PapaParse failed to load!");
-                document.getElementById("status").textContent = "Error: CSV parser failed to load.";
-                return;
-            } else {
-                console.log("PapaParse loaded successfully.");
-            }
+            const refreshButton = document.getElementById('refreshButton');
 
-            fetch("word_counts.csv")
-                .then(response => {
-                    if (!response.ok) throw new Error("Failed to load CSV file.");
-                    return response.text();
-                })
-                .then(csvText => {
-                    console.log("CSV Loaded Successfully");
-                    document.getElementById("status").style.display = "none";
-                    const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
+            function loadChartData() {
+                fetch("word_counts.csv")
+                    .then(response => {
+                        if (!response.ok) throw new Error("Failed to load CSV file.");
+                        return response.text();
+                    })
+                    .then(csvText => {
+                        console.log("CSV Loaded Successfully");
+                        document.getElementById("status").style.display = "none";
+                        const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
 
-                    if (!parsed.data.length) throw new Error("CSV file is empty.");
-                    console.log("Parsed Data:", parsed.data);
+                        if (!parsed.data.length) throw new Error("CSV file is empty.");
+                        console.log("Parsed Data:", parsed.data);
 
-                    const aggregatedData = {};
-                    const titleSet = new Set();
+                        const aggregatedData = {};
+                        const titleSet = new Set();
 
-                    parsed.data.forEach(row => {
-                        const agency = row["Agency"];
-                        const title = `Title ${row["Title"]}`;
-                        const wordCount = parseInt(row["Word Count"], 10) || 0;
+                        parsed.data.forEach(row => {
+                            const agency = row["Agency"];
+                            const title = `Title ${row["Title"]}`;
+                            const wordCount = parseInt(row["Word Count"], 10) || 0;
 
-                        titleSet.add(title);
-                        if (!aggregatedData[agency]) aggregatedData[agency] = { Agency: agency };
-                        aggregatedData[agency][title] = (aggregatedData[agency][title] || 0) + wordCount;
-                    });
+                            titleSet.add(title);
+                            if (!aggregatedData[agency]) aggregatedData[agency] = { Agency: agency };
+                            aggregatedData[agency][title] = (aggregatedData[agency][title] || 0) + wordCount;
+                        });
 
-                    const agencies = Object.keys(aggregatedData);
-                    let titles = Array.from(titleSet);
+                        const agencies = Object.keys(aggregatedData);
+                        let titles = Array.from(titleSet);
 
-                    // Sort titles based on their numeric order (e.g., Title 1, Title 2, Title 3, etc.)
-                    titles.sort((a, b) => {
-                        const numA = parseInt(a.split(' ')[1]);
-                        const numB = parseInt(b.split(' ')[1]);
-                        return numA - numB;
-                    });
+                        titles.sort((a, b) => {
+                            const numA = parseInt(a.split(' ')[1]);
+                            const numB = parseInt(b.split(' ')[1]);
+                            return numA - numB;
+                        });
 
-                    console.log("Agencies:", agencies);
-                    console.log("Titles:", titles);
+                        console.log("Agencies:", agencies);
+                        console.log("Titles:", titles);
 
-                    const agencyNumbers = agencies.sort().reduce((acc, agency, index) => {
-                        acc[agency] = index + 1; // Numbering agencies starting from 1
-                        return acc;
-                    }, {});
+                        const agencyNumbers = agencies.sort().reduce((acc, agency, index) => {
+                            acc[agency] = index + 1;
+                            return acc;
+                        }, {});
 
-                    const datasets = titles.map((title, index) => ({
-                        label: title,
-                        data: agencies.map(agency => aggregatedData[agency][title] || 0),
-                        backgroundColor: `hsl(${(index * 50) % 360}, 70%, 50%)`
-                    }));
+                        const datasets = titles.map((title, index) => ({
+                            label: title,
+                            data: agencies.map(agency => aggregatedData[agency][title] || 0),
+                            backgroundColor: `hsl(${(index * 50) % 360}, 70%, 50%)`
+                        }));
 
-                    console.log("Datasets:", datasets);
+                        console.log("Datasets:", datasets);
 
-                    const ctx = document.getElementById("wordCountChart").getContext("2d");
-                    new Chart(ctx, {
-                        type: "bar",
-                        data: { labels: agencies.map(agency => agencyNumbers[agency]), datasets: datasets },
-                        options: {
-                            responsive: true,
-                            maintainAspectRatio: false,
-                            plugins: { 
-                                legend: { 
-                                    position: "top" 
-                                }, 
-                                tooltip: {
-                                    mode: "index",
-                                    intersect: false,
-                                    callbacks: {
-                                        // Modify tooltip header to include agency name and number
-                                        title: function (tooltipItem) {
-                                            const agency = agencies[tooltipItem[0].dataIndex]; // Get agency name
-                                            const agencyNumber = agencyNumbers[agency]; // Get agency number
-                                            return `${agency} (${agencyNumber})`; // Title will show agency name and number in parentheses
-                                        },
-                                        // Modify tooltip body to show the word count for the title
-                                        label: function (tooltipItem) {
-                                            const dataset = tooltipItem.dataset;
-                                            const value = dataset.data[tooltipItem.dataIndex];
-                                            return value > 0 ? `${dataset.label}: ${value}` : null; // Title and word count
+                        const ctx = document.getElementById("wordCountChart").getContext("2d");
+
+                        // Destroy previous chart instance if it exists
+                        if (chartInstance) {
+                            chartInstance.destroy();
+                        }
+
+                        // Create new chart instance
+                        chartInstance = new Chart(ctx, {
+                            type: "bar",
+                            data: { labels: agencies.map(agency => agencyNumbers[agency]), datasets: datasets },
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                plugins: { 
+                                    legend: { position: "top" }, 
+                                    tooltip: {
+                                        mode: "index",
+                                        intersect: false,
+                                        callbacks: {
+                                            title: function (tooltipItem) {
+                                                const agency = agencies[tooltipItem[0].dataIndex];
+                                                const agencyNumber = agencyNumbers[agency];
+                                                return `${agency} (${agencyNumber})`;
+                                            },
+                                            label: function (tooltipItem) {
+                                                const dataset = tooltipItem.dataset;
+                                                const value = dataset.data[tooltipItem.dataIndex];
+                                                return value > 0 ? `${dataset.label}: ${value}` : null;
+                                            }
                                         }
                                     }
-                                }
-                            },
-                            scales: { 
-                                x: { stacked: true }, 
-                                y: { stacked: true }
+                                },
+                                scales: { x: { stacked: true }, y: { stacked: true } }
                             }
-                        }
+                        });
+
+                        // Create agency table
+                        const sortedAgencies = Object.keys(agencyNumbers)
+                            .sort((a, b) => a.localeCompare(b))
+                            .map(agency => `<tr><td>${agencyNumbers[agency]}</td><td>${agency}</td></tr>`).join("");
+
+                        const tableHTML = `
+                            <table>
+                                <thead>
+                                    <tr><th>Number</th><th>Agency</th></tr>
+                                </thead>
+                                <tbody>
+                                    ${sortedAgencies}
+                                </tbody>
+                            </table>
+                        `;
+                        document.getElementById("agency-table-container").innerHTML = tableHTML;
+                    })
+                    .catch(error => {
+                        document.getElementById("status").textContent = "Error loading data: " + error.message;
+                        console.error("Error:", error);
                     });
+            }
 
-                    // Create table for agencies
-                    const sortedAgencies = Object.keys(agencyNumbers)
-                        .sort((a, b) => a.localeCompare(b))
-                        .map(agency => `<tr><td>${agencyNumbers[agency]}</td><td>${agency}</td></tr>`).join("");
+            // Initially load the chart data
+            loadChartData();
 
-                    const tableHTML = `
-                        <table>
-                            <thead>
-                                <tr><th>Number</th><th>Agency</th></tr>
-                            </thead>
-                            <tbody>
-                                ${sortedAgencies}
-                            </tbody>
-                        </table>
-                    `;
-                    document.getElementById("agency-table-container").innerHTML = tableHTML;
-                })
-                .catch(error => {
-                    document.getElementById("status").textContent = "Error loading data: " + error.message;
-                    console.error("Error:", error);
-                });
+            // Add click event to the refresh button
+            refreshButton.addEventListener('click', function () {
+                console.log("Refreshing graph...");
+
+                // Call the backend to refresh the CSV
+                fetch('http://127.0.0.1:5000/refresh_graph')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.message === "CSV file updated successfully") {
+                            console.log("CSV updated, reloading chart data.");
+                            loadChartData();  // Reload chart with updated data
+                        } else {
+                            console.error("Error refreshing graph:", data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                    });
+            });
         });
     </script>
 </body>
