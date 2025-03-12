@@ -27,7 +27,7 @@
         }
         table {
             margin-top: 20px;
-            width: 30%;
+            width: 50%;
             margin-left: auto;
             margin-right: auto;
             border-collapse: collapse;
@@ -72,8 +72,9 @@
         document.addEventListener("DOMContentLoaded", function () {
             const refreshButton = document.getElementById('refreshButton');
 
+            // Function to load chart data
             function loadChartData() {
-                fetch("word_counts.csv")
+                fetch("/word_counts.csv")
                     .then(response => {
                         if (!response.ok) throw new Error("Failed to load CSV file.");
                         return response.text();
@@ -193,17 +194,18 @@
 
                 // Call the backend to refresh the CSV
                 fetch('http://127.0.0.1:5000/refresh_graph')
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.message === "CSV file updated successfully") {
-                            console.log("CSV updated, reloading chart data.");
-                            loadChartData();  // Reload chart with updated data
-                        } else {
-                            console.error("Error refreshing graph:", data.message);
-                        }
+                    .then(response => response.blob())  // Fetch as Blob (CSV binary data)
+                    .then(blob => {
+                        // Create a temporary link element to download the CSV file
+                        const link = document.createElement('a');
+                        const url = window.URL.createObjectURL(blob);
+                        link.href = url;
+
+                        console.log("CSV file refreshed and downloaded.");
                     })
                     .catch(error => {
                         console.error("Error:", error);
+                        alert("Failed to refresh graph. Check backend logs.");
                     });
             });
         });
