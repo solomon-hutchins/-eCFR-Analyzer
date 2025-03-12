@@ -51,6 +51,16 @@
         button:hover {
             background-color: #45a049;
         }
+        #refreshInfo {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        #time-graph-container {
+            margin-top: 40px; /* Added space to separate from other elements */
+            padding-left: 40px;
+            padding-right: 40px;
+        }
     </style>
 </head>
 <body>
@@ -59,155 +69,274 @@
     <div id="chart-container">
         <canvas id="wordCountChart"></canvas>
     </div>
-    
-    <!-- Refresh button -->
+
+    <!-- Refresh button for current graph -->
     <button id="refreshButton">Refresh Graph</button>
+
+    <!-- Information below the refresh button -->
+    <p id="refreshInfo">Refreshing may take a moment. A key to assign each agency to a number can be found at the bottom of the page.</p>
+
+    <!-- Subtitle for the search section -->
+    <h3>Search Cumulative Appearances by Word and Date to Present</h3>
+
+    <!-- Form to input the word and select the date -->
+    <div id="word-search-form">
+        <input type="text" id="searchWord" placeholder="Enter word to search" />
+        <input type="date" id="searchDate" />
+        <button id="searchButton">Search and Plot</button>
+    </div>
+
+    <!-- Graph for cumulative word occurrences over time -->
+    <div id="time-graph-container">
+        <canvas id="timeWordCountChart"></canvas>
+    </div>
 
     <!-- Agency table -->
     <div id="agency-table-container"></div>
 
     <script>
         let chartInstance = null; // Store chart instance globally
+        let timeChartInstance = null; // Store time chart instance
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const refreshButton = document.getElementById('refreshButton');
+        // Function to load chart data
+        function loadChartData() {
+            fetch("/word_counts.csv")
+                .then(response => {
+                    if (!response.ok) throw new Error("Failed to load CSV file.");
+                    return response.text();
+                })
+                .then(csvText => {
+                    console.log("CSV Loaded Successfully");
+                    document.getElementById("status").style.display = "none";
+                    const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
 
-            // Function to load chart data
-            function loadChartData() {
-                fetch("/word_counts.csv")
-                    .then(response => {
-                        if (!response.ok) throw new Error("Failed to load CSV file.");
-                        return response.text();
-                    })
-                    .then(csvText => {
-                        console.log("CSV Loaded Successfully");
-                        document.getElementById("status").style.display = "none";
-                        const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
+                    if (!parsed.data.length) throw new Error("CSV file is empty.");
+                    console.log("Parsed Data:", parsed.data);
 
-                        if (!parsed.data.length) throw new Error("CSV file is empty.");
-                        console.log("Parsed Data:", parsed.data);
+                    const aggregatedData = {};
+                    const titleSet = new Set();
 
-                        const aggregatedData = {};
-                        const titleSet = new Set();
+                    parsed.data.forEach(row => {
+                        const agency = row["Agency"];
+                        const title = `Title ${row["Title"]}`;
+                        const wordCount = parseInt(row["Word Count"], 10) || 0;
 
-                        parsed.data.forEach(row => {
-                            const agency = row["Agency"];
-                            const title = `Title ${row["Title"]}`;
-                            const wordCount = parseInt(row["Word Count"], 10) || 0;
+                        titleSet.add(title);
+                        if (!aggregatedData[agency]) aggregatedData[agency] = { Agency: agency };
+                        aggregatedData[agency][title] = (aggregatedData[agency][title] || 0) + wordCount;
+                    });
 
-                            titleSet.add(title);
-                            if (!aggregatedData[agency]) aggregatedData[agency] = { Agency: agency };
-                            aggregatedData[agency][title] = (aggregatedData[agency][title] || 0) + wordCount;
-                        });
+                    const agencies = Object.keys(aggregatedData);
+                    let titles = Array.from(titleSet);
 
-                        const agencies = Object.keys(aggregatedData);
-                        let titles = Array.from(titleSet);
+                    titles.sort((a, b) => {
+                        const numA = parseInt(a.split(' ')[1]);
+                        const numB = parseInt(b.split(' ')[1]);
+                        return numA - numB;
+                    });
 
-                        titles.sort((a, b) => {
-                            const numA = parseInt(a.split(' ')[1]);
-                            const numB = parseInt(b.split(' ')[1]);
-                            return numA - numB;
-                        });
+                    console.log("Agencies:", agencies);
+                    console.log("Titles:", titles);
 
-                        console.log("Agencies:", agencies);
-                        console.log("Titles:", titles);
+                    const agencyNumbers = agencies.sort().reduce((acc, agency, index) => {
+                        acc[agency] = index + 1;
+                        return acc;
+                    }, {});
 
-                        const agencyNumbers = agencies.sort().reduce((acc, agency, index) => {
-                            acc[agency] = index + 1;
-                            return acc;
-                        }, {});
+                    const datasets = titles.map((title, index) => ({
+                        label: title,
+                        data: agencies.map(agency => aggregatedData[agency][title] || 0),
+                        backgroundColor: `hsl(${(index * 50) % 360}, 70%, 50%)`
+                    }));
 
-                        const datasets = titles.map((title, index) => ({
-                            label: title,
-                            data: agencies.map(agency => aggregatedData[agency][title] || 0),
-                            backgroundColor: `hsl(${(index * 50) % 360}, 70%, 50%)`
-                        }));
+                    console.log("Datasets:", datasets);
 
-                        console.log("Datasets:", datasets);
+                    const ctx = document.getElementById("wordCountChart").getContext("2d");
 
-                        const ctx = document.getElementById("wordCountChart").getContext("2d");
+                    // Destroy previous chart instance if it exists
+                    if (chartInstance) {
+                        chartInstance.destroy();
+                    }
 
-                        // Destroy previous chart instance if it exists
-                        if (chartInstance) {
-                            chartInstance.destroy();
+                    // Create new chart instance
+                    chartInstance = new Chart(ctx, {
+                        type: "bar",
+                        data: { labels: agencies.map(agency => agencyNumbers[agency]), datasets: datasets },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: { 
+                                legend: { position: "top" }, 
+                                tooltip: {
+                                    mode: "index",
+                                    intersect: false,
+                                    callbacks: {
+                                        title: function (tooltipItem) {
+                                            const agency = agencies[tooltipItem[0].dataIndex];
+                                            const agencyNumber = agencyNumbers[agency];
+                                            return `${agency} (${agencyNumber})`;
+                                        },
+                                        label: function (tooltipItem) {
+                                            const dataset = tooltipItem.dataset;
+                                            const value = dataset.data[tooltipItem.dataIndex];
+                                            return value > 0 ? `${dataset.label}: ${value}` : null;
+                                        }
+                                    }
+                                }
+                            },
+                            scales: { x: { stacked: true }, y: { stacked: true } }
                         }
+                    });
 
-                        // Create new chart instance
-                        chartInstance = new Chart(ctx, {
-                            type: "bar",
-                            data: { labels: agencies.map(agency => agencyNumbers[agency]), datasets: datasets },
-                            options: {
-                                responsive: true,
-                                maintainAspectRatio: false,
-                                plugins: { 
-                                    legend: { position: "top" }, 
-                                    tooltip: {
-                                        mode: "index",
-                                        intersect: false,
-                                        callbacks: {
-                                            title: function (tooltipItem) {
-                                                const agency = agencies[tooltipItem[0].dataIndex];
-                                                const agencyNumber = agencyNumbers[agency];
-                                                return `${agency} (${agencyNumber})`;
-                                            },
-                                            label: function (tooltipItem) {
-                                                const dataset = tooltipItem.dataset;
-                                                const value = dataset.data[tooltipItem.dataIndex];
-                                                return value > 0 ? `${dataset.label}: ${value}` : null;
+                    // Create agency table
+                    const sortedAgencies = Object.keys(agencyNumbers)
+                        .sort((a, b) => a.localeCompare(b))
+                        .map(agency => `<tr><td>${agencyNumbers[agency]}</td><td>${agency}</td></tr>`).join("");
+
+                    const tableHTML = `
+                        <table>
+                            <thead>
+                                <tr><th>Number</th><th>Agency</th></tr>
+                            </thead>
+                            <tbody>
+                                ${sortedAgencies}
+                            </tbody>
+                        </table>
+                    `;
+                    document.getElementById("agency-table-container").innerHTML = tableHTML;
+                })
+                .catch(error => {
+                    document.getElementById("status").textContent = "Error loading data: " + error.message;
+                    console.error("Error:", error);
+                });
+        }
+
+        // Function to fetch word count over time
+        function fetchWordCountOverTime(word, date) {
+            const url = `/fetch_word_count_over_time?word=${word}&date=${date}`;
+
+            return fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Ensure data is not empty and properly formatted
+                    if (Array.isArray(data) && data.length > 0) {
+                        let cumulativeCount = 0;
+                        // Parse dates and sort them
+                        data.forEach(item => {
+                            item.date = new Date(item.date);  // Convert date string to Date object
+                        });
+
+                        // Sort by date
+                        data.sort((a, b) => a.date - b.date);
+
+                        const timeData = data.map(item => {
+                            cumulativeCount += item.count;  // Keep running total of counts
+                            return {
+                                date: item.date.toLocaleDateString(),  // Format date as string
+                                count: cumulativeCount  // Use the cumulative count
+                            };
+                        });
+                        return timeData;
+                    } else {
+                        console.error("No valid data returned from API.");
+                        return [];
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching word count over time:", error);
+                    return [];
+                });
+        }
+
+        // Add click event to search button
+        document.getElementById("searchButton").addEventListener('click', function () {
+            const word = document.getElementById("searchWord").value;
+            const date = document.getElementById("searchDate").value;
+
+            if (word && date) {
+                fetchWordCountOverTime(word, date)
+                    .then(timeData => {
+                        if (timeData.length > 0) {
+                            const dates = timeData.map(item => item.date);
+                            const counts = timeData.map(item => item.count);
+
+                            // Render the time-based chart
+                            const ctx = document.getElementById("timeWordCountChart").getContext("2d");
+
+                            // Destroy previous time chart if it exists
+                            if (timeChartInstance) {
+                                timeChartInstance.destroy();
+                            }
+
+                            timeChartInstance = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: dates,
+                                    datasets: [{
+                                        label: `Cumulative occurrences of "${word}" over time`,
+                                        data: counts,
+                                        borderColor: '#FF5733',
+                                        fill: false
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                    scales: {
+                                        x: {
+                                            title: {
+                                                display: true,
+                                                text: 'Date'
+                                            }
+                                        },
+                                        y: {
+                                            title: {
+                                                display: true,
+                                                text: 'Cumulative Occurrences'
                                             }
                                         }
                                     }
-                                },
-                                scales: { x: { stacked: true }, y: { stacked: true } }
-                            }
-                        });
-
-                        // Create agency table
-                        const sortedAgencies = Object.keys(agencyNumbers)
-                            .sort((a, b) => a.localeCompare(b))
-                            .map(agency => `<tr><td>${agencyNumbers[agency]}</td><td>${agency}</td></tr>`).join("");
-
-                        const tableHTML = `
-                            <table>
-                                <thead>
-                                    <tr><th>Number</th><th>Agency</th></tr>
-                                </thead>
-                                <tbody>
-                                    ${sortedAgencies}
-                                </tbody>
-                            </table>
-                        `;
-                        document.getElementById("agency-table-container").innerHTML = tableHTML;
+                                }
+                            });
+                        } else {
+                            console.error("No data to plot.");
+                        }
                     })
-                    .catch(error => {
-                        document.getElementById("status").textContent = "Error loading data: " + error.message;
-                        console.error("Error:", error);
-                    });
+                    .catch(error => console.error("Error plotting data:", error));
+            } else {
+                alert("Please enter both a word and a date.");
             }
+        });
 
-            // Initially load the chart data
-            loadChartData();
+        // Initially load the chart data
+        loadChartData();
 
-            // Add click event to the refresh button
-            refreshButton.addEventListener('click', function () {
-                console.log("Refreshing graph...");
+        // Add click event to the refresh button
+        refreshButton.addEventListener('click', function () {
+            console.log("Refreshing graph...");
 
-                // Call the backend to refresh the CSV
-                fetch('http://127.0.0.1:5000/refresh_graph')
-                    .then(response => response.blob())  // Fetch as Blob (CSV binary data)
-                    .then(blob => {
-                        // Create a temporary link element to download the CSV file
-                        const link = document.createElement('a');
-                        const url = window.URL.createObjectURL(blob);
-                        link.href = url;
+            // Call the backend to refresh the CSV
+            fetch('http://127.0.0.1:5000/refresh_graph')
+                .then(response => response.blob())  // Fetch as Blob (CSV binary data)
+                .then(blob => {
+                    // Create a temporary link element to download the CSV file
+                    const link = document.createElement('a');
+                    const url = window.URL.createObjectURL(blob);
+                    link.href = url;
 
-                        console.log("CSV file refreshed and downloaded.");
-                    })
-                    .catch(error => {
-                        console.error("Error:", error);
-                        alert("Failed to refresh graph. Check backend logs.");
-                    });
-            });
+                    // Optional: Trigger download for the refreshed CSV (if desired)
+                    link.download = 'word_counts.csv';  // Filename for download
+                    link.click();
+
+                    console.log("CSV file refreshed and downloaded.");
+
+                    // After downloading, reload the chart data
+                    loadChartData();
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("Failed to refresh graph. Check backend logs.");
+                });
         });
     </script>
 </body>
