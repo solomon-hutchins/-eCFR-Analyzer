@@ -1,5 +1,5 @@
 
-# **eCFR Word Count Graphing Tool**
+# **eCFR Interactive Count and Graphing Tool**
 
 This project provides a web application that allows users to visualize word counts from the eCFR (Electronic Code of Federal Regulations). It enables the following features:
 
